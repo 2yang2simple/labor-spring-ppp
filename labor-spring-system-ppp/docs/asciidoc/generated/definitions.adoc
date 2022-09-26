@@ -1,0 +1,803 @@
+
+[[_definitions]]
+== Definitions
+
+[[_asample]]
+=== ASample
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_dictionary]]
+=== Dictionary
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**code** +
+__optional__|**Example** : `"string"`|string
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**order** +
+__optional__|**Example** : `0`|integer (int32)
+|**parentid** +
+__optional__|**Example** : `0`|integer (int32)
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|**value1** +
+__optional__|**Example** : `"string"`|string
+|**value2** +
+__optional__|**Example** : `"string"`|string
+|**value3** +
+__optional__|**Example** : `"string"`|string
+|**value4** +
+__optional__|**Example** : `"string"`|string
+|**value5** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_document]]
+=== Document
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**docStatus** +
+__optional__|**Example** : `"string"`|string
+|**fileMd5** +
+__optional__|**Example** : `"string"`|string
+|**filePath** +
+__optional__|**Example** : `"string"`|string
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**namePinyin** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_documentcomment]]
+=== DocumentComment
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**creator** +
+__optional__|**Example** : `"string"`|string
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**docId** +
+__optional__|**Example** : `0`|integer (int32)
+|**html** +
+__optional__|**Example** : `"string"`|string
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**text** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_documentcontent]]
+=== DocumentContent
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**docId** +
+__optional__|**Example** : `0`|integer (int32)
+|**html** +
+__optional__|**Example** : `"string"`|string
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**md5** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**text** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_documentdto]]
+=== DocumentDto
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**commentList** +
+__optional__|**Example** : `[ "<<_documentcomment>>" ]`|< <<_documentcomment,DocumentComment>> > array
+|**content** +
+__optional__|**Example** : `"<<_documentcontent>>"`|<<_documentcontent,DocumentContent>>
+|**contentList** +
+__optional__|**Example** : `[ "<<_documentcontent>>" ]`|< <<_documentcontent,DocumentContent>> > array
+|**creator** +
+__optional__|**Example** : `"<<_uservo>>"`|<<_uservo,UserVO>>
+|**docStatus** +
+__optional__|**Example** : `"string"`|string
+|**document** +
+__optional__|**Example** : `"<<_document>>"`|<<_document,Document>>
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**tagList** +
+__optional__|**Example** : `[ "<<_documenttag>>" ]`|< <<_documenttag,DocumentTag>> > array
+|**tagName** +
+__optional__|**Example** : `"string"`|string
+|**tagType** +
+__optional__|**Example** : `"string"`|string
+|**userList** +
+__optional__|**Example** : `[ "<<_documentuser>>" ]`|< <<_documentuser,DocumentUser>> > array
+|**userid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_documenttag]]
+=== DocumentTag
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**docId** +
+__optional__|**Example** : `0`|integer (int32)
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**tagId** +
+__optional__|**Example** : `0`|integer (int32)
+|**tagName** +
+__optional__|**Example** : `"string"`|string
+|**tagType** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_documentuser]]
+=== DocumentUser
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**docId** +
+__optional__|**Example** : `0`|integer (int32)
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**userId** +
+__optional__|**Example** : `0`|integer (int64)
+|**userName** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_file]]
+=== File
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**absolute** +
+__optional__|**Example** : `true`|boolean
+|**absoluteFile** +
+__optional__|**Example** : `"file"`|file
+|**absolutePath** +
+__optional__|**Example** : `"string"`|string
+|**canonicalFile** +
+__optional__|**Example** : `"file"`|file
+|**canonicalPath** +
+__optional__|**Example** : `"string"`|string
+|**directory** +
+__optional__|**Example** : `true`|boolean
+|**executable** +
+__optional__|**Example** : `true`|boolean
+|**file** +
+__optional__|**Example** : `true`|boolean
+|**freeSpace** +
+__optional__|**Example** : `0`|integer (int64)
+|**hidden** +
+__optional__|**Example** : `true`|boolean
+|**lastModified** +
+__optional__|**Example** : `0`|integer (int64)
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**parent** +
+__optional__|**Example** : `"string"`|string
+|**parentFile** +
+__optional__|**Example** : `"file"`|file
+|**path** +
+__optional__|**Example** : `"string"`|string
+|**readable** +
+__optional__|**Example** : `true`|boolean
+|**totalSpace** +
+__optional__|**Example** : `0`|integer (int64)
+|**usableSpace** +
+__optional__|**Example** : `0`|integer (int64)
+|**writable** +
+__optional__|**Example** : `true`|boolean
+|===
+
+
+[[_gallery]]
+=== Gallery
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**caption** +
+__optional__|**Example** : `"string"`|string
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**namePinyin** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_galleryimage]]
+=== GalleryImage
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**caption** +
+__optional__|**Example** : `"string"`|string
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**fileName** +
+__optional__|**Example** : `"string"`|string
+|**gaId** +
+__optional__|**Example** : `0`|integer (int32)
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**namePinyin** +
+__optional__|**Example** : `"string"`|string
+|**ohId** +
+__optional__|**Example** : `0`|integer (int32)
+|**order** +
+__optional__|**Example** : `0`|integer (int32)
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**url** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_inputstream]]
+=== InputStream
+__Type__ : object
+
+
+[[_product]]
+=== Product
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**code** +
+__optional__|**Example** : `"string"`|string
+|**color** +
+__optional__|**Example** : `"string"`|string
+|**costPrice** +
+__optional__|**Example** : `0.0`|number (float)
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**currency** +
+__optional__|**Example** : `"string"`|string
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**itemNo** +
+__optional__|**Example** : `"string"`|string
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**marketPrice** +
+__optional__|**Example** : `0.0`|number (float)
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**namePinyin** +
+__optional__|**Example** : `"string"`|string
+|**parentId** +
+__optional__|**Example** : `0`|integer (int32)
+|**price** +
+__optional__|**Example** : `0.0`|number (float)
+|**productStatus** +
+__optional__|**Example** : `"string"`|string
+|**size** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_project]]
+=== Project
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**amount** +
+__optional__|**Example** : `0.0`|number (float)
+|**code** +
+__optional__|**Example** : `"string"`|string
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**currency** +
+__optional__|**Example** : `"string"`|string
+|**customer** +
+__optional__|**Example** : `"string"`|string
+|**customerCode** +
+__optional__|**Example** : `"string"`|string
+|**deliveryDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**manager** +
+__optional__|**Example** : `"string"`|string
+|**managerUserid** +
+__optional__|**Example** : `0`|integer (int32)
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**namePinyin** +
+__optional__|**Example** : `"string"`|string
+|**parentId** +
+__optional__|**Example** : `0`|integer (int32)
+|**projectStatus** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**supplier** +
+__optional__|**Example** : `"string"`|string
+|**supplierCode** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_resource]]
+=== Resource
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**file** +
+__optional__|**Example** : `"file"`|file
+|**filename** +
+__optional__|**Example** : `"string"`|string
+|**inputStream** +
+__optional__|**Example** : `"<<_inputstream>>"`|<<_inputstream,InputStream>>
+|**open** +
+__optional__|**Example** : `true`|boolean
+|**readable** +
+__optional__|**Example** : `true`|boolean
+|**uri** +
+__optional__|**Example** : `"<<_uri>>"`|<<_uri,URI>>
+|**url** +
+__optional__|**Example** : `"<<_url>>"`|<<_url,URL>>
+|===
+
+
+[[_result]]
+=== Result
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**code** +
+__optional__|**Example** : `0`|integer (int32)
+|**data** +
+__optional__|**Example** : `"object"`|object
+|**msg** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_richtext]]
+=== Richtext
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**html** +
+__optional__|**Example** : `"string"`|string
+|**id** +
+__optional__|**Example** : `0`|integer (int32)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**text** +
+__optional__|**Example** : `"string"`|string
+|**url** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_role]]
+=== Role
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**id** +
+__optional__|**Example** : `0`|integer (int64)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_rolepermission]]
+=== RolePermission
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**id** +
+__optional__|**Example** : `0`|integer (int64)
+|**perid** +
+__optional__|**Example** : `0`|integer (int64)
+|**roleid** +
+__optional__|**Example** : `0`|integer (int64)
+|===
+
+
+[[_sysconfig]]
+=== Sysconfig
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**id** +
+__optional__|**Example** : `0`|integer (int64)
+|**key** +
+__optional__|**Example** : `"string"`|string
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|**value** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_uri]]
+=== URI
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**absolute** +
+__optional__|**Example** : `true`|boolean
+|**authority** +
+__optional__|**Example** : `"string"`|string
+|**fragment** +
+__optional__|**Example** : `"string"`|string
+|**host** +
+__optional__|**Example** : `"string"`|string
+|**opaque** +
+__optional__|**Example** : `true`|boolean
+|**path** +
+__optional__|**Example** : `"string"`|string
+|**port** +
+__optional__|**Example** : `0`|integer (int32)
+|**query** +
+__optional__|**Example** : `"string"`|string
+|**rawAuthority** +
+__optional__|**Example** : `"string"`|string
+|**rawFragment** +
+__optional__|**Example** : `"string"`|string
+|**rawPath** +
+__optional__|**Example** : `"string"`|string
+|**rawQuery** +
+__optional__|**Example** : `"string"`|string
+|**rawSchemeSpecificPart** +
+__optional__|**Example** : `"string"`|string
+|**rawUserInfo** +
+__optional__|**Example** : `"string"`|string
+|**scheme** +
+__optional__|**Example** : `"string"`|string
+|**schemeSpecificPart** +
+__optional__|**Example** : `"string"`|string
+|**userInfo** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_url]]
+=== URL
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**authority** +
+__optional__|**Example** : `"string"`|string
+|**content** +
+__optional__|**Example** : `"object"`|object
+|**defaultPort** +
+__optional__|**Example** : `0`|integer (int32)
+|**deserializedFields** +
+__optional__|**Example** : `"<<_urlstreamhandler>>"`|<<_urlstreamhandler,URLStreamHandler>>
+|**file** +
+__optional__|**Example** : `"string"`|string
+|**host** +
+__optional__|**Example** : `"string"`|string
+|**path** +
+__optional__|**Example** : `"string"`|string
+|**port** +
+__optional__|**Example** : `0`|integer (int32)
+|**protocol** +
+__optional__|**Example** : `"string"`|string
+|**query** +
+__optional__|**Example** : `"string"`|string
+|**ref** +
+__optional__|**Example** : `"string"`|string
+|**serializedHashCode** +
+__optional__|**Example** : `0`|integer (int32)
+|**userInfo** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_urlstreamhandler]]
+=== URLStreamHandler
+__Type__ : object
+
+
+[[_user]]
+=== User
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**cellPhone** +
+__optional__|**Example** : `"string"`|string
+|**createdBy** +
+__optional__|**Example** : `"string"`|string
+|**creationDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**description** +
+__optional__|**Example** : `"string"`|string
+|**email** +
+__optional__|**Example** : `"string"`|string
+|**googleSecretKey** +
+__optional__|**Example** : `"string"`|string
+|**id** +
+__optional__|**Example** : `0`|integer (int64)
+|**lastUpdateDate** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**lastUpdatedBy** +
+__optional__|**Example** : `"string"`|string
+|**name** +
+__optional__|**Example** : `"string"`|string
+|**pwdmodify** +
+__optional__|**Example** : `"string"`|string
+|**realName** +
+__optional__|**Example** : `"string"`|string
+|**realNameEn** +
+__optional__|**Example** : `"string"`|string
+|**sno** +
+__optional__|**Example** : `"string"`|string
+|**status** +
+__optional__|**Example** : `"string"`|string
+|**uuid** +
+__optional__|**Example** : `"string"`|string
+|**weixin** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+[[_userrole]]
+=== UserRole
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**id** +
+__optional__|**Example** : `0`|integer (int64)
+|**roleid** +
+__optional__|**Example** : `0`|integer (int64)
+|**userid** +
+__optional__|**Example** : `0`|integer (int64)
+|===
+
+
+[[_uservo]]
+=== UserVO
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**userId** +
+__optional__|**Example** : `0`|integer (int64)
+|**userName** +
+__optional__|**Example** : `"string"`|string
+|**userRealName** +
+__optional__|**Example** : `"string"`|string
+|**userUuid** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+

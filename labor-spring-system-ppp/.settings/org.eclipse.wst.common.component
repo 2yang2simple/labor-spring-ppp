@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ppp">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="labor-spring-system-auth-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/labor-spring-system-auth/labor-spring-system-auth">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="labor-spring-core-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/labor-spring-core/labor-spring-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="labor-spring-feign-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/labor-spring-feign/labor-spring-feign">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="labor-spring-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/labor-spring/labor-spring">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="labor-common-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/labor-common/labor-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="labor-spring-system-oss-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/labor-spring-system-oss/labor-spring-system-oss">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="ppp"/>
+        <property name="java-output-path" value="/labor-spring-system-ppp/target/classes"/>
+    </wb-module>
+</project-modules>

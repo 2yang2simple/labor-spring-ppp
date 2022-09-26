@@ -1,0 +1,180 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.labor</groupId>
+		<artifactId>labor</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>com.labor.spring.system.ppp</groupId>
+	<artifactId>labor-spring-system-ppp</artifactId>
+	<name>labor-spring-system-ppp</name>
+	<!-- 
+	<packaging>war</packaging>
+ 	-->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-dependencies</artifactId>
+	            <version>${spring-boot.version}</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<dependencies>
+		<!-- internal dependencies 
+		<dependency>
+			<groupId>com.labor.spring.core</groupId>
+			<artifactId>labor-spring-core</artifactId>
+			<version>${labor-spring-core.version}</version>
+		</dependency>-->
+		<dependency>
+			<groupId>com.labor.spring.system.auth</groupId>
+			<artifactId>labor-spring-system-auth</artifactId>
+			<version>${labor-spring-system-auth.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.labor.spring.system.oss</groupId>
+			<artifactId>labor-spring-system-oss</artifactId>
+			<version>${labor-spring-system-oss.version}</version>
+		</dependency>
+		
+		<!-- hanlp -->
+		<dependency>
+		    <groupId>com.hankcs</groupId>
+		    <artifactId>hanlp</artifactId>
+		    <version>portable-1.7.4</version>
+		</dependency>
+		
+		<!-- 热部署模块 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional> <!-- 这个需要为 true 热部署才有效 -->
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>ppp</finalName>
+		<pluginManagement>
+		
+		<plugins>
+			
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-war-plugin</artifactId>
+			    <configuration>
+			    	<outputDirectory>${final-file-path}</outputDirectory>
+			        <webResources>
+			            <resource>
+			                <directory>${project.basedir}/build/prod</directory>
+			                <targetPath>WEB-INF/classes</targetPath>
+			                <includes>
+			                    <include>*.*</include>
+			                </includes>
+			            </resource>
+			        </webResources>
+			    </configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.google.code.maven-replacer-plugin</groupId>
+				<artifactId>replacer</artifactId>
+				<version>1.5.3</version>
+				<executions>
+				 <execution>
+					<id>prepare-war</id>
+					<phase>prepare-package</phase>
+					<goals>
+					<goal>replace</goal>
+					</goals>
+				 </execution>
+				</executions>
+				<configuration>
+				 <includes>
+				  <include>${project.basedir}\src\main\resources\templates\help.html
+				  </include>
+				 </includes>
+				 <outputFile>${project.basedir}\target\classes\templates\help.html
+				 </outputFile>
+				<replacements>
+				 <replacement>
+				  <token>-version-</token>
+				  <value>${maven.build.timestamp}</value>
+				 </replacement>
+				</replacements>
+				</configuration>
+			</plugin>
+			
+            <plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+				<plugin>
+					<groupId>io.github.swagger2markup</groupId>
+					<artifactId>swagger2markup-maven-plugin</artifactId>
+					<version>1.3.1</version>
+					<configuration>
+						<swaggerInput>http://127.0.0.1:8080/ppp/v2/api-docs</swaggerInput>
+						<outputDir>./docs/asciidoc/generated</outputDir>
+						<config>
+							<swagger2markup.markupLanguage>ASCIIDOC</swagger2markup.markupLanguage>
+						</config>
+					</configuration>
+				</plugin>
+				<plugin>
+				<!-- run maven asciidoctor:process-asciidoc --> -->
+				    <executions>
+				        <execution>
+				            <id>output-html</id>
+				            <phase>generate-resources</phase>
+				            <goals>
+				                <goal>process-asciidoc</goal>
+				            </goals>
+				        </execution>
+				    </executions>
+					<groupId>org.asciidoctor</groupId>
+					<artifactId>asciidoctor-maven-plugin</artifactId>
+					<version>1.5.3</version>
+					<!-- <version>2.0.0-RC.1</version> -->
+					<!-- Include Asciidoctor PDF for pdf generation -->
+					<dependencies>
+						<dependency>
+							<groupId>org.asciidoctor</groupId>
+							<artifactId>asciidoctorj-pdf</artifactId>
+							<version>1.5.0-alpha.10.1</version>
+						</dependency>
+						<dependency>
+							<groupId>org.jruby</groupId>
+							<artifactId>jruby-complete</artifactId>
+							<version>1.7.21</version>
+						</dependency>
+					</dependencies>
+					<configuration>
+						<sourceDirectory>./docs/asciidoc/generated</sourceDirectory>
+						<outputDirectory>./docs/asciidoc/html</outputDirectory> 
+						<backend>html</backend>
+						<!-- <outputDirectory>./docs/asciidoc/pdf</outputDirectory> 
+						<backend>pdf</backend> -->
+						<headerFooter>true</headerFooter> 
+						<doctype>book</doctype> 
+						<sourceHighlighter>coderay</sourceHighlighter>
+						<attributes>
+							<!-- 菜单栏在左边 -->
+							<toc>left</toc>
+							<!-- 多标题排列 -->
+							<toclevels>3</toclevels>
+							<!-- 自动打数字序号 -->
+							<sectnums>true</sectnums>
+						</attributes>
+					</configuration>					
+				</plugin>
+				
+		</plugins>
+		</pluginManagement>
+		
+
+	</build>
+	 
+</project>

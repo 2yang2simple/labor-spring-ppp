@@ -1,0 +1,99 @@
+<div th:fragment="header">  
+<title th:text="#{tips.auth.welcome}">Auth</title>
+<head>
+	
+<style type="text/css">
+.tab-wrapper{
+  position: relative;
+  margin: 3px auto; 
+  width: 98%;
+  height: 20px;
+  background-color: white;
+}
+.tab-wrapper .tab-radio{
+  display: none;
+}
+.tab-handler{
+  margin: 0px 0px 0px 30px;
+  display: block;
+  float: left;
+  height: 22px;
+  padding: 0px 0px 5px 00px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 30px;
+}
+.tab-radio:checked + .tab-handler{
+  border-bottom: 21px solid lightgray;
+  text-decoration: none;
+  padding: 0px 0px 5px 00px;
+  margin: 0px 0px 0px 30px;
+}
+
+.tab-handler a:hover
+{ 	
+	text-decoration: none;
+	background-color: lightgray;
+}
+
+.tab-wrapper .tab-content{
+  visibility: hidden;
+  position: relative;
+  top: 22px;
+  left: 10px;
+  width: 100%;
+  padding: 0px 0px 5px 20px;
+  font-size: 14px;
+  transform: translateY(20px);
+}
+
+</style>
+
+<div class="headbody">
+	<nav class="navbar navbar-default" style="background-color: white;">
+	  	<div class="container-fluid">
+		    <div class="navbar-header">
+			    <!--
+			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			    </button>
+	 			-->
+		      	<div class="navbar-brand">
+			      	<span class="label label-default" style="font-size: 20px; " >
+			      			Auth
+			      	</span>
+			      	&nbsp;
+			      	<label th:text="#{tips.auth.welcome}"></label>
+		     	</div>
+		    </div>   
+		</div>
+	</nav>
+	
+
+<script type="text/javascript">
+
+
+function homeRatioSelected(){
+	$("#tab-radio-home").attr("checked", "true"); 
+}
+
+function do2ndRatioSelected(){
+	$("#tab-radio-2nd").attr("checked", "true"); 
+}
+
+function do1stRatioSelected(){
+	$("#tab-radio-1st").attr("checked", "true"); 
+}
+
+function galleryRatioSelected(){
+	$("#tab-radio-3rd").attr("checked", "true"); 
+}
+function documentRatioSelected(){
+	$("#tab-radio-3rd").attr("checked", "true"); 
+}
+</script>
+</head>	
+</div>

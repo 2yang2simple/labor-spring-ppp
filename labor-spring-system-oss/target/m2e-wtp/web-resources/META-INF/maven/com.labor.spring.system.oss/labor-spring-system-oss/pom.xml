@@ -1,0 +1,148 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.labor</groupId>
+		<artifactId>labor</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>com.labor.spring.system.oss</groupId>
+	<artifactId>labor-spring-system-oss</artifactId>
+	<name>labor-spring-system-oss</name>
+	<packaging>war</packaging>
+		
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-dependencies</artifactId>
+	            <version>${spring-boot.version}</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
+	        
+		</dependencies>
+	</dependencyManagement>
+	
+	<dependencies>
+		<!-- internal dependencies -->
+		<dependency>
+			<groupId>com.labor.spring.core</groupId>
+			<artifactId>labor-spring-core</artifactId>
+			<version>${labor-spring-core.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.aliyun.oss</groupId>
+		    <artifactId>aliyun-sdk-oss</artifactId>
+		    <version>3.8.0</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>oss</finalName>
+		<plugins>
+			<!-- ######### WAR START ##########-->
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-war-plugin</artifactId>
+			    <configuration>
+					<outputDirectory>${final-file-path}</outputDirectory>
+			        <webResources>
+			            <resource>
+			                <directory>${project.basedir}/build/prod</directory>
+			                <targetPath>WEB-INF/classes</targetPath>
+			                <includes>
+			                    <include>*.*</include>
+			                </includes>
+			            </resource>
+			            <!-- 
+			            <resource>
+			                <directory>${project.basedir}/src/main/resources/templates/00.account/sso</directory>
+			                <targetPath>WEB-INF/classes/templates/00.account/</targetPath>
+			                <includes>
+			                    <include>*.html</include>
+			                </includes>
+			            </resource>
+			             -->
+			        </webResources>
+			    </configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.google.code.maven-replacer-plugin</groupId>
+				<artifactId>replacer</artifactId>
+				<version>1.5.3</version>
+				<executions>
+				 <execution>
+					<id>prepare-war</id>
+					<phase>prepare-package</phase>
+					<goals>
+					<goal>replace</goal>
+					</goals>
+				 </execution>
+				</executions>
+				<configuration>
+				 <includes>
+				  <include>${project.basedir}\src\main\resources\templates\help.html
+				  </include>
+				 </includes>
+				 <outputFile>${project.basedir}\target\classes\templates\help.html
+				 </outputFile>
+				<replacements>
+				 <replacement>
+				  <token>-version-</token>
+				  <value>${maven.build.timestamp}</value>
+				 </replacement>
+				</replacements>
+				</configuration>
+			</plugin>
+			<!-- ######### WAR END ############-->
+			<!-- ######### JAR START ##########
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-jar-plugin</artifactId>
+			    <configuration>
+			        <webResources>
+			            <resource>
+			                <directory>${project.basedir}/production</directory>
+			                <targetPath>BOOT-INF/classes</targetPath>
+			                <includes>
+			                    <include>*.*</include>
+			                </includes>
+			            </resource>
+			        </webResources>
+			    </configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.google.code.maven-replacer-plugin</groupId>
+				<artifactId>replacer</artifactId>
+				<version>1.5.3</version>
+				<executions>
+				 <execution>
+					<id>prepare-jar</id>
+					<phase>prepare-package</phase>
+					<goals>
+					<goal>replace</goal>
+					</goals>
+				 </execution>
+				</executions>
+				<configuration>
+				 <includes>
+				  <include>${project.basedir}\src\main\resources\templates\help.html
+				  </include>
+				 </includes>
+				 <outputFile>${project.basedir}\target\classes\templates\help.html
+				 </outputFile>
+				<replacements>
+				 <replacement>
+				  <token>-version-</token>
+				  <value>${maven.build.timestamp}</value>
+				 </replacement>
+				</replacements>
+				</configuration>
+			</plugin>-->
+			<!-- ######### JAR END ############-->
+		</plugins>
+		
+
+	</build>
+	
+</project>

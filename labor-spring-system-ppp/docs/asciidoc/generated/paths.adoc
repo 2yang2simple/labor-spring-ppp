@@ -1,0 +1,11554 @@
+
+[[_paths]]
+== Resources
+
+[[_a-sample-rest-controller_resource]]
+=== A-sample-rest-controller
+A Sample Rest Controller
+
+
+[[_createusingpost]]
+==== create
+....
+POST /rest/core/samples
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**asample** +
+__required__|asample|<<_asample,ASample>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/samples
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistusingget_1]]
+==== findList
+....
+GET /rest/core/samples
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/samples
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_aopandusingget]]
+==== aopand
+....
+GET /rest/core/samples/aopand
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/samples/aopand
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_aoporusingget]]
+==== aopor
+....
+GET /rest/core/samples/aopor
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/samples/aopor
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistbynameusingget]]
+==== findListByName
+....
+GET /rest/core/samples/namestart-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**namestart** +
+__required__|namestart|string|
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**pagesize** +
+__optional__|pagesize|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/samples/namestart-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "namestart" : "string",
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistusingget]]
+==== findList
+....
+GET /rest/core/samples/page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**pagesize** +
+__optional__|pagesize|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/samples/page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistbystatususingget]]
+==== findListByStatus
+....
+GET /rest/core/samples/status-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**pagesize** +
+__optional__|pagesize|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|**Query**|**status** +
+__optional__|status|string|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/samples/status-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string",
+  "status" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_testusingget]]
+==== test
+....
+GET /rest/core/samples/test
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/samples/test
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findbyuuidusingget]]
+==== findByUuid
+....
+GET /rest/core/samples/uuid-{uuid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/samples/uuid-string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateusingput]]
+==== update
+....
+PUT /rest/core/samples/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**asample** +
+__required__|asample|<<_asample,ASample>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/samples/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updatestatususingpatch]]
+==== updateStatus
+....
+PATCH /rest/core/samples/{id}/status/{status}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Path**|**status** +
+__required__|status|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/samples/0/status/string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findsubslistbystatususingget]]
+==== findSubsListByStatus
+....
+GET /rest/core/samples/{id}/subs
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Query**|**status** +
+__optional__|status|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/samples/0/subs
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "status" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_dictionary-rest-controller_resource]]
+=== Dictionary-rest-controller
+Dictionary Rest Controller
+
+
+[[_createusingpost_1]]
+==== create
+....
+POST /rest/core/dictionaries
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**dictionary** +
+__required__|dictionary|<<_dictionary,Dictionary>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/dictionaries
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "code" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "order" : 0,
+  "parentid" : 0,
+  "status" : "string",
+  "uuid" : "string",
+  "value1" : "string",
+  "value2" : "string",
+  "value3" : "string",
+  "value4" : "string",
+  "value5" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findsubslistusingget]]
+==== findSubsList
+....
+GET /rest/core/dictionaries/subs
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**code** +
+__optional__|code|string
+|**Query**|**status** +
+__optional__|status|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/dictionaries/subs
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "code" : "string",
+  "status" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findtopslistusingget]]
+==== findTopsList
+....
+GET /rest/core/dictionaries/tops
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/dictionaries/tops
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createtopdictionarysusingpost]]
+==== createTopDictionarys
+....
+POST /rest/core/dictionaries/tops-init
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/dictionaries/tops-init
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateusingput_1]]
+==== update
+....
+PUT /rest/core/dictionaries/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**dictionary** +
+__required__|dictionary|<<_dictionary,Dictionary>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/dictionaries/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "code" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "order" : 0,
+  "parentid" : 0,
+  "status" : "string",
+  "uuid" : "string",
+  "value1" : "string",
+  "value2" : "string",
+  "value3" : "string",
+  "value4" : "string",
+  "value5" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updatestatususingpatch_1]]
+==== updateStatus
+....
+PATCH /rest/core/dictionaries/{id}/status/{status}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Path**|**status** +
+__required__|status|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/dictionaries/0/status/string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_document-rest-controller_resource]]
+=== Document-rest-controller
+Document Rest Controller
+
+
+[[_createusingpost_2]]
+==== create
+....
+POST /rest/documents
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**documentDto** +
+__required__|documentDto|<<_documentdto,DocumentDto>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "commentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "creator" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "content" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  },
+  "contentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "creator" : {
+    "userId" : 0,
+    "userName" : "string",
+    "userRealName" : "string",
+    "userUuid" : "string"
+  },
+  "docStatus" : "string",
+  "document" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docStatus" : "string",
+    "fileMd5" : "string",
+    "filePath" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "name" : "string",
+    "namePinyin" : "string",
+    "status" : "string",
+    "uuid" : "string"
+  },
+  "id" : 0,
+  "name" : "string",
+  "tagList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "tagId" : 0,
+    "tagName" : "string",
+    "tagType" : "string",
+    "uuid" : "string"
+  } ],
+  "tagName" : "string",
+  "tagType" : "string",
+  "userList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "userId" : 0,
+    "userName" : "string",
+    "uuid" : "string"
+  } ],
+  "userid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistusingget_2]]
+==== findList
+....
+GET /rest/documents
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_initdocumentsusingget]]
+==== initDocuments
+....
+GET /rest/documents/init
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/init
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findmydocumentlistusingget]]
+==== findMyDocumentList
+....
+GET /rest/documents/my-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/my-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "page" : 0,
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistbynamelikeusingget]]
+==== findListByNameLike
+....
+GET /rest/documents/name-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**name** +
+__optional__|name|string|
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/name-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "name" : "string",
+  "page" : 0,
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistbytagusingget]]
+==== findListByTag
+....
+GET /rest/documents/tag-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"doc_id"`
+|**Query**|**tag** +
+__optional__|tag|string|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/tag-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "page" : 0,
+  "sortby" : "string",
+  "tag" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findtaglistusingget]]
+==== findTagList
+....
+GET /rest/documents/tags/name-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**name** +
+__optional__|name|string|
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/tags/name-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "name" : "string",
+  "page" : 0,
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findbyuuidusingget_1]]
+==== findByUuid
+....
+GET /rest/documents/uuid-{uuid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|**Query**|**contentid** +
+__optional__|contentid|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/uuid-string
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "contentid" : 0
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateusingput_2]]
+==== update
+....
+PUT /rest/documents/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**documentDto** +
+__required__|documentDto|<<_documentdto,DocumentDto>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "commentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "creator" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "content" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  },
+  "contentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "creator" : {
+    "userId" : 0,
+    "userName" : "string",
+    "userRealName" : "string",
+    "userUuid" : "string"
+  },
+  "docStatus" : "string",
+  "document" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docStatus" : "string",
+    "fileMd5" : "string",
+    "filePath" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "name" : "string",
+    "namePinyin" : "string",
+    "status" : "string",
+    "uuid" : "string"
+  },
+  "id" : 0,
+  "name" : "string",
+  "tagList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "tagId" : 0,
+    "tagName" : "string",
+    "tagType" : "string",
+    "uuid" : "string"
+  } ],
+  "tagName" : "string",
+  "tagType" : "string",
+  "userList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "userId" : 0,
+    "userName" : "string",
+    "uuid" : "string"
+  } ],
+  "userid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createcommentusingpost]]
+==== createComment
+....
+POST /rest/documents/{id}/comments
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**comment** +
+__required__|comment|<<_documentcomment,DocumentComment>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/0/comments
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "creator" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "status" : "string",
+  "text" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findcommentlistbyidusingget]]
+==== findCommentListById
+....
+GET /rest/documents/{id}/comments
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/0/comments
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createcontentusingpost]]
+==== createContent
+....
+POST /rest/documents/{id}/contents
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**content** +
+__required__|content|<<_documentcontent,DocumentContent>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/0/contents
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "md5" : "string",
+  "status" : "string",
+  "text" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findcontentversionsbydocidusingget]]
+==== findContentVersionsByDocid
+....
+GET /rest/documents/{id}/contents-versions
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/0/contents-versions
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findcontentbyidusingget]]
+==== findContentById
+....
+GET /rest/documents/{id}/contents/{contentid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**contentid** +
+__required__|contentid|integer (int32)
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/0/contents/0
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updatecontentusingput]]
+==== updateContent
+....
+PUT /rest/documents/{id}/contents/{contentid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**contentid** +
+__required__|contentid|integer (int32)
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**content** +
+__required__|content|<<_documentcontent,DocumentContent>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/0/contents/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "md5" : "string",
+  "status" : "string",
+  "text" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createtagusingpost]]
+==== createTag
+....
+POST /rest/documents/{id}/tags
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Path**|**id** +
+__required__|id|integer (int32)|
+|**Query**|**tagname** +
+__required__|tagname|string|
+|**Query**|**tagtype** +
+__optional__|tagtype|string|`"10"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/0/tags
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "tagname" : "string",
+  "tagtype" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updatetaglistusingpost]]
+==== updateTagList
+....
+POST /rest/documents/{id}/tags/list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**tagList** +
+__required__|tagList|< <<_documenttag,DocumentTag>> > array
+|**Body**|**tagType** +
+__required__|tagType|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/0/tags/list
+----
+
+
+====== Request body
+[source,json]
+----
+{ }
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateuserlistusingpost]]
+==== updateUserList
+....
+POST /rest/documents/{id}/users/list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**userList** +
+__required__|userList|< <<_documentuser,DocumentUser>> > array
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/0/users/list
+----
+
+
+====== Request body
+[source,json]
+----
+[ {
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "status" : "string",
+  "userId" : 0,
+  "userName" : "string",
+  "uuid" : "string"
+} ]
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findentitybyfilenameusingget]]
+==== findEntityByFilename
+....
+GET /rest/documents/{uuid}/file
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/documents/string/file
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_feign-auth-rest-controller_resource]]
+=== Feign-auth-rest-controller
+Feign Auth Rest Controller
+
+
+[[_logoutusingdelete]]
+==== loggout
+....
+DELETE /rest/feign/auth/logins
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/auth/logins
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_deletecacheusingdelete]]
+==== deleteCache
+....
+DELETE /rest/feign/auth/logins/cache
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/auth/logins/cache
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findusercurrentusingget]]
+==== findUserCurrent
+....
+GET /rest/feign/auth/logins/users/current
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**fetch** +
+__optional__|fetch|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/auth/logins/users/current
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "fetch" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_finduserpermissionscurrentusingget]]
+==== findUserPermissionsCurrent
+....
+GET /rest/feign/auth/logins/users/permissions/current
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**fetch** +
+__optional__|fetch|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/auth/logins/users/permissions/current
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "fetch" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_requestusertokenusingpost]]
+==== callback url registed in auth return a key for access token saved in cache. authCacheService.getTokenCache(key)
+....
+POST /rest/feign/auth/logins/users/tokens/keys
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**auth-code** +
+__optional__|auth-code|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/auth/logins/users/tokens/keys
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_init2authusingget]]
+==== init2auth
+....
+GET /rest/feign/auth/permissions/init2auth
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/auth/permissions/init2auth
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_feign-oss-rest-controller_resource]]
+=== Feign-oss-rest-controller
+Feign OSS Rest Controller
+
+
+[[_createfileusingpost]]
+==== createFile
+....
+POST /rest/feign/oss/files
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**file** +
+__required__|file|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/oss/files
+----
+
+
+====== Request formData
+[source,json]
+----
+"file"
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findfilebyfilenameusingget]]
+==== findFileByFilename
+....
+GET /rest/feign/oss/files/{filename}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**filename** +
+__required__|filename|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/oss/files/string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_createimageusingpost]]
+==== createImage
+....
+POST /rest/feign/oss/images
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**file** +
+__required__|file|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/oss/images
+----
+
+
+====== Request formData
+[source,json]
+----
+"file"
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findimagebyfilenameusingget]]
+==== findImageByFilename
+....
+GET /rest/feign/oss/images/{filename}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**filename** +
+__required__|filename|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/oss/images/string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_findimagebyfilenamebyoriginusingget]]
+==== findImageByFilenameByOrigin
+....
+GET /rest/feign/oss/images/{filename}/origin
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**filename** +
+__required__|filename|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/oss/images/string/origin
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_findimagebyfilenamebysizeusingget]]
+==== findImageByFilenameBySize
+....
+GET /rest/feign/oss/images/{filename}/size
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**filename** +
+__required__|filename|string
+|**Query**|**accuracy** +
+__optional__|accuracy|number (double)
+|**Query**|**height** +
+__optional__|height|integer (int32)
+|**Query**|**width** +
+__optional__|width|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/oss/images/string/size
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "accuracy" : 0.0,
+  "height" : 0,
+  "width" : 0
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_qrcodeusingget]]
+==== qrCode
+....
+GET /rest/feign/oss/qr-code
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**content** +
+__optional__|content|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/feign/oss/qr-code
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "content" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_fingerprint-rest-controller_resource]]
+=== Fingerprint-rest-controller
+Fingerprint Rest Controller
+
+
+[[_findonlinelistusingget]]
+==== findOnlineList
+....
+GET /rest/fingerprints/online/page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**pagesize** +
+__optional__|pagesize|integer (int32)|`0`
+|**Query**|**sortby** +
+__required__|sortby|string|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/fingerprints/online/page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findonlinelistbyvalueusingget]]
+==== findOnlineListByValue
+....
+GET /rest/fingerprints/online/valuestart-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**pagesize** +
+__optional__|pagesize|integer (int32)|`0`
+|**Query**|**sortby** +
+__required__|sortby|string|
+|**Query**|**valuestart** +
+__required__|valuestart|string|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/fingerprints/online/valuestart-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string",
+  "valuestart" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_deleteonlineusingdelete]]
+==== deleteOnline
+....
+DELETE /rest/fingerprints/online/{foid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**foid** +
+__required__|foid|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/fingerprints/online/0
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistusingget_3]]
+==== findList
+....
+GET /rest/fingerprints/sort-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**sortby** +
+__required__|sortby|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/fingerprints/sort-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistusingget_4]]
+==== findList
+....
+GET /rest/fingerprints/sort-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**pagesize** +
+__optional__|pagesize|integer (int32)|`0`
+|**Query**|**sortby** +
+__required__|sortby|string|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/fingerprints/sort-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistbyvalueusingget]]
+==== findListByValue
+....
+GET /rest/fingerprints/valuestart-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**valuestart** +
+__required__|valuestart|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/fingerprints/valuestart-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "valuestart" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistbyvalueusingget_1]]
+==== findListByValue
+....
+GET /rest/fingerprints/valuestart-sort-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**pagesize** +
+__optional__|pagesize|integer (int32)|`0`
+|**Query**|**sortby** +
+__required__|sortby|string|
+|**Query**|**valuestart** +
+__required__|valuestart|string|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/fingerprints/valuestart-sort-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string",
+  "valuestart" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updatestatususingpatch_2]]
+==== updateStatus
+....
+PATCH /rest/fingerprints/{id}/status/{status}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|**Path**|**status** +
+__required__|status|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/fingerprints/0/status/string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_foreign-auth-rest-controller_resource]]
+=== Foreign-auth-rest-controller
+Foreign Auth Rest Controller
+
+
+[[_logoutusingdelete_1]]
+==== Loggout a user
+....
+DELETE /rest/foreign/logins
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**code** +
+__optional__|access-token|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|No Content
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/logins
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "code" : "string"
+}
+----
+
+
+[[_findloginuserusingget]]
+==== Find a login user
+....
+GET /rest/foreign/logins/users
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**code** +
+__optional__|access-token|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/logins/users
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "code" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_fetchloginusertokenusingpost]]
+==== Fetch a user access-token
+....
+POST /rest/foreign/logins/users/tokens
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**code** +
+__optional__|auth-code,access-token|string
+|**Query**|**type** +
+__optional__|request-token,refresh-token|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/logins/users/tokens
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "code" : "string",
+  "type" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updatepermissionsusingput]]
+==== Update permissions by type
+....
+PUT /rest/foreign/permissions/{client-key}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**client-key** +
+__optional__|client name|string
+|**Query**|**permissions** +
+__optional__|permissions list|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/permissions/{client-key}
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "client-key" : "string",
+  "permissions" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findpermissionsusingget]]
+==== Find user permissions
+....
+GET /rest/foreign/permissions/{client-key}/{uuid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**client-key** +
+__optional__|client name|string
+|**Query**|**uuid** +
+__optional__|user uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/permissions/{client-key}/{uuid}
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "client-key" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_foreign-oss-rest-controller_resource]]
+=== Foreign-oss-rest-controller
+Foreign OSS Rest Controller
+
+
+[[_createfileusingpost_1]]
+==== createFile
+....
+POST /rest/foreign/files
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**file** +
+__required__|file|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/files
+----
+
+
+====== Request formData
+[source,json]
+----
+"file"
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findfilebyfilenameusingget_1]]
+==== findFileByFilename
+....
+GET /rest/foreign/files/{filename}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**filename** +
+__required__|filename|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/files/string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_createimageusingpost_1]]
+==== createImage
+....
+POST /rest/foreign/images
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**file** +
+__required__|file|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/images
+----
+
+
+====== Request formData
+[source,json]
+----
+"file"
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createimagebybytesusingpost]]
+==== createImageByBytes
+....
+POST /rest/foreign/images/bytes
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**filename** +
+__required__|filename|string
+|**Body**|**filebytes** +
+__required__|filebytes|string (byte)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/images/bytes
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "filename" : "string"
+}
+----
+
+
+====== Request body
+[source,json]
+----
+{ }
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findimagebyfilenameusingget_1]]
+==== findImageByFilename
+....
+GET /rest/foreign/images/{filename}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**filename** +
+__required__|filename|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/images/string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_findimagebyfilenamebyoriginusingget_1]]
+==== findImageByFilenameByOrigin
+....
+GET /rest/foreign/images/{filename}/origin
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**filename** +
+__required__|filename|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/images/string/origin
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_findimagebyfilenamebysizeusingget_1]]
+==== findImageByFilenameBySize
+....
+GET /rest/foreign/images/{filename}/size
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**filename** +
+__required__|filename|string
+|**Query**|**accuracy** +
+__optional__|accuracy|number (double)
+|**Query**|**height** +
+__optional__|height|integer (int32)
+|**Query**|**width** +
+__optional__|width|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/images/string/size
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "accuracy" : 0.0,
+  "height" : 0,
+  "width" : 0
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_qrcodeusingget_1]]
+==== qrCode
+....
+GET /rest/foreign/qr-code
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**content** +
+__optional__|content|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/foreign/qr-code
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "content" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_gallery-rest-controller_resource]]
+=== Gallery-rest-controller
+Gallery Rest Controller
+
+
+[[_createusingpost_3]]
+==== create
+....
+POST /rest/galleries
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**gallery** +
+__required__|gallery|<<_gallery,Gallery>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "caption" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "namePinyin" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findimagebyuuidusingget]]
+==== findImageByUuid
+....
+GET /rest/galleries/images/{uuid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/images/string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findimageentityoriginbyuuidusingget]]
+==== findImageEntityOriginByUuid
+....
+GET /rest/galleries/images/{uuid}/entity
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/images/string/entity
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_findimageentitythumbnailbyuuidusingget]]
+==== findImageEntityThumbnailByUuid
+....
+GET /rest/galleries/images/{uuid}/entity/thumbnail
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|**Query**|**accuracy** +
+__optional__|accuracy|number (double)
+|**Query**|**height** +
+__optional__|height|integer (int32)
+|**Query**|**width** +
+__optional__|width|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/images/string/entity/thumbnail
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "accuracy" : 0.0,
+  "height" : 0,
+  "width" : 0
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_findlistbynamelikeusingget_1]]
+==== findListByNameLike
+....
+GET /rest/galleries/name-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**name** +
+__optional__|name|string|
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|**Query**|**status** +
+__optional__|status|string|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/name-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "name" : "string",
+  "page" : 0,
+  "sortby" : "string",
+  "status" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findbyuuidusingget_2]]
+==== findByUuid
+....
+GET /rest/galleries/uuid-{uuid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/uuid-string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateusingput_3]]
+==== update
+....
+PUT /rest/galleries/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**gallery** +
+__required__|gallery|<<_gallery,Gallery>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "caption" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "namePinyin" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createimagesusingpost]]
+==== createImages
+....
+POST /rest/galleries/{id}/images
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Path**|**id** +
+__required__|id|integer (int32)|
+|**Query**|**startOrder** +
+__optional__|startOrder|integer (int32)|`0`
+|**FormData**|**files** +
+__required__|files|< file > array(multi)|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/0/images
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "startOrder" : 0
+}
+----
+
+
+====== Request formData
+[source,json]
+----
+"file"
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createimagesingleusingpost]]
+==== createImageSingle
+....
+POST /rest/galleries/{id}/images/single
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**FormData**|**file** +
+__required__|file|file
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `multipart/form-data`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/0/images/single
+----
+
+
+====== Request formData
+[source,json]
+----
+"file"
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateimageusingput]]
+==== updateImage
+....
+PUT /rest/galleries/{id}/images/{galleryImageId}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**galleryImageId** +
+__required__|galleryImageId|integer (int32)
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**galleryImage** +
+__required__|galleryImage|<<_galleryimage,GalleryImage>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/0/images/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "caption" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "fileName" : "string",
+  "gaId" : 0,
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "namePinyin" : "string",
+  "ohId" : 0,
+  "order" : 0,
+  "status" : "string",
+  "url" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createimageusingpost_2]]
+==== createImage
+....
+POST /rest/galleries/{id}/test
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**files** +
+__required__|files|< file > array(multi)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/{id}/test
+----
+
+
+====== Request formData
+[source,json]
+----
+"file"
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createimage2usingpost]]
+==== createImage2
+....
+POST /rest/galleries/{id}/test2
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**FormData**|**files** +
+__required__|files|< file > array(multi)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/{id}/test2
+----
+
+
+====== Request formData
+[source,json]
+----
+"file"
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findcoverbyuuidusingget]]
+==== findCoverByUuid
+....
+GET /rest/galleries/{uuid}/cover
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/string/cover
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_findimagelistbyuuidusingget_1]]
+==== findImageListByUuid
+....
+GET /rest/galleries/{uuid}/images
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|**Query**|**capion** +
+__optional__|capion|string
+|**Query**|**status** +
+__optional__|status|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/string/images
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "capion" : "string",
+  "status" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findimagelistbyuuidusingget]]
+==== findImageListByUuid
+....
+GET /rest/galleries/{uuid}/images/page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Path**|**uuid** +
+__required__|uuid|string|
+|**Query**|**capion** +
+__optional__|capion|string|
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|**Query**|**status** +
+__optional__|status|string|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/galleries/string/images/page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "capion" : "string",
+  "page" : 0,
+  "sortby" : "string",
+  "status" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_labor-spring-rest-controller_resource]]
+=== Labor-spring-rest-controller
+Labor Spring Rest Controller
+
+
+[[_infousingget]]
+==== info
+....
+GET /rest
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_permission-rest-controller_resource]]
+=== Permission-rest-controller
+Permission Rest Controller
+
+
+[[_findlistactivedusingget]]
+==== findListActived
+....
+GET /rest/permissions/actived-list
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/permissions/actived-list
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_initializationusingpost]]
+==== initialization
+....
+POST /rest/permissions/initialization
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/permissions/initialization
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_product-rest-controller_resource]]
+=== Product-rest-controller
+Product Rest Controller
+
+
+[[_createusingpost_4]]
+==== create
+....
+POST /rest/products
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**product** +
+__required__|product|<<_product,Product>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/products
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "code" : "string",
+  "color" : "string",
+  "costPrice" : 0.0,
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "currency" : "string",
+  "description" : "string",
+  "id" : 0,
+  "itemNo" : "string",
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "marketPrice" : 0.0,
+  "name" : "string",
+  "namePinyin" : "string",
+  "parentId" : 0,
+  "price" : 0.0,
+  "productStatus" : "string",
+  "size" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_exportexcelusingget]]
+==== exportExcel
+....
+GET /rest/products/excel
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/products/excel
+----
+
+
+[[_findlistbynamelikeusingget_2]]
+==== findListByNameLike
+....
+GET /rest/products/name-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**name** +
+__optional__|name|string|
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**pagesize** +
+__optional__|pagesize|integer (int32)|
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|**Query**|**status** +
+__optional__|status|string|
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/products/name-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "name" : "string",
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string",
+  "status" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findbyuuidusingget_3]]
+==== findByUuid
+....
+GET /rest/products/uuid-{uuid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/products/uuid-string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateproductusingput]]
+==== updateProduct
+....
+PUT /rest/products/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**product** +
+__required__|product|<<_product,Product>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/products/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "code" : "string",
+  "color" : "string",
+  "costPrice" : 0.0,
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "currency" : "string",
+  "description" : "string",
+  "id" : 0,
+  "itemNo" : "string",
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "marketPrice" : 0.0,
+  "name" : "string",
+  "namePinyin" : "string",
+  "parentId" : 0,
+  "price" : 0.0,
+  "productStatus" : "string",
+  "size" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_finddocumentlistusingget]]
+==== findDocumentList
+....
+GET /rest/products/{id}/docs/page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Path**|**id** +
+__required__|id|integer (int32)|
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"doc_id"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/products/0/docs/page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "page" : 0,
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findgallerylistusingget]]
+==== findGalleryList
+....
+GET /rest/products/{id}/galleries/page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Path**|**id** +
+__required__|id|integer (int32)|
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"ga_id"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/products/0/galleries/page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "page" : 0,
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findcoverbyuuidusingget_1]]
+==== findCoverByUuid
+....
+GET /rest/products/{uuid}/cover
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/products/string/cover
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_createdocumentusingpost]]
+==== createDocument
+....
+POST /rest/products/{uuid}/docs
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|**Body**|**documentDto** +
+__required__|documentDto|<<_documentdto,DocumentDto>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/products/string/docs
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "commentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "creator" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "content" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  },
+  "contentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "creator" : {
+    "userId" : 0,
+    "userName" : "string",
+    "userRealName" : "string",
+    "userUuid" : "string"
+  },
+  "docStatus" : "string",
+  "document" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docStatus" : "string",
+    "fileMd5" : "string",
+    "filePath" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "name" : "string",
+    "namePinyin" : "string",
+    "status" : "string",
+    "uuid" : "string"
+  },
+  "id" : 0,
+  "name" : "string",
+  "tagList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "tagId" : 0,
+    "tagName" : "string",
+    "tagType" : "string",
+    "uuid" : "string"
+  } ],
+  "tagName" : "string",
+  "tagType" : "string",
+  "userList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "userId" : 0,
+    "userName" : "string",
+    "uuid" : "string"
+  } ],
+  "userid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_creategalleryusingpost]]
+==== createGallery
+....
+POST /rest/products/{uuid}/galleries
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|**Body**|**gallery** +
+__required__|gallery|<<_gallery,Gallery>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/products/string/galleries
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "caption" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "namePinyin" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_profile-rest-controller_resource]]
+=== Profile-rest-controller
+Profile Rest Controller
+
+
+[[_updateuserpasswordusingpost]]
+==== updateUserPassword
+....
+POST /rest/profiles/passwords
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**hm** +
+__required__|hm|< string, string > map
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/profiles/passwords
+----
+
+
+====== Request body
+[source,json]
+----
+{ }
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createqrcodeusingget]]
+==== createQrCode
+....
+GET /rest/profiles/qr-code
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**content** +
+__optional__|content|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< string (byte) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/profiles/qr-code
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "content" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ "string" ]
+----
+
+
+[[_signupusingpost]]
+==== signup
+....
+POST /rest/profiles/signup
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**g** +
+__required__|g|string
+|**Query**|**t** +
+__required__|t|string
+|**Body**|**hm** +
+__required__|hm|< string, string > map
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|string
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/profiles/signup
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "g" : "string",
+  "t" : "string"
+}
+----
+
+
+====== Request body
+[source,json]
+----
+{ }
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+"string"
+----
+
+
+[[_signupcodeusingpost]]
+==== signupCode
+....
+POST /rest/profiles/signup-code
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**g** +
+__required__|g|string
+|**Query**|**t** +
+__required__|t|string
+|**Body**|**hm** +
+__required__|hm|< string, string > map
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/profiles/signup-code
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "g" : "string",
+  "t" : "string"
+}
+----
+
+
+====== Request body
+[source,json]
+----
+{ }
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_signupsuperusingpost]]
+==== signupSuper
+....
+POST /rest/profiles/signup-super
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**hm** +
+__required__|hm|< string, string > map
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|string
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/profiles/signup-super
+----
+
+
+====== Request body
+[source,json]
+----
+{ }
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+"string"
+----
+
+
+[[_findcurrentuserusingget]]
+==== findCurrentUser
+....
+GET /rest/profiles/users/current
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/profiles/users/current
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updatecurrentuserusingpatch]]
+==== updateCurrentUser
+....
+PATCH /rest/profiles/users/current
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**puser** +
+__required__|puser|<<_user,User>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/profiles/users/current
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "cellPhone" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "email" : "string",
+  "googleSecretKey" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "pwdmodify" : "string",
+  "realName" : "string",
+  "realNameEn" : "string",
+  "sno" : "string",
+  "status" : "string",
+  "uuid" : "string",
+  "weixin" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findcurrentuserqrurlusingget]]
+==== findCurrentUserQRUrl
+....
+GET /rest/profiles/users/current/qr-code-url
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/profiles/users/current/qr-code-url
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_finduserpasswordsaltbyaccountusingget]]
+==== findUserPasswordSaltByAccount
+....
+GET /rest/profiles/users/{account}/salt
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**account** +
+__required__|account|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/profiles/users/string/salt
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_finduserbypwdmodifypasswordusingget]]
+==== findUserByPwdmodifyPassword
+....
+GET /rest/profiles/users/{pwdmodify}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**pwdmodify** +
+__required__|pwdmodify|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/profiles/users/string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_finduserqrurlbypwdmodifypasswordusingget]]
+==== findUserQRUrlByPwdmodifyPassword
+....
+GET /rest/profiles/users/{pwdmodify}/auth-qr-code-url
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**pwdmodify** +
+__required__|pwdmodify|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/profiles/users/string/auth-qr-code-url
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_project-rest-controller_resource]]
+=== Project-rest-controller
+Project Rest Controller
+
+
+[[_createusingpost_5]]
+==== create
+....
+POST /rest/projects
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**project** +
+__required__|project|<<_project,Project>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "amount" : 0.0,
+  "code" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "currency" : "string",
+  "customer" : "string",
+  "customerCode" : "string",
+  "deliveryDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "manager" : "string",
+  "managerUserid" : 0,
+  "name" : "string",
+  "namePinyin" : "string",
+  "parentId" : 0,
+  "projectStatus" : "string",
+  "status" : "string",
+  "supplier" : "string",
+  "supplierCode" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistnonclosedbynamelikeusingget]]
+==== findListNonClosedByNameLike
+....
+GET /rest/projects/name-list-non-closed
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**name** +
+__required__|name|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/name-list-non-closed
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "name" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistbynamelikeusingget_3]]
+==== findListByNameLike
+....
+GET /rest/projects/name-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**name** +
+__required__|name|string|
+|**Query**|**notinstatus** +
+__optional__|notinstatus|string|
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**pagesize** +
+__optional__|pagesize|integer (int32)|
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/name-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "name" : "string",
+  "notinstatus" : "string",
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findbyuuidusingget_4]]
+==== findByUuid
+....
+GET /rest/projects/uuid-{uuid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/uuid-string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateprojectusingput]]
+==== updateProject
+....
+PUT /rest/projects/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**project** +
+__required__|project|<<_project,Project>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "amount" : 0.0,
+  "code" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "currency" : "string",
+  "customer" : "string",
+  "customerCode" : "string",
+  "deliveryDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "manager" : "string",
+  "managerUserid" : 0,
+  "name" : "string",
+  "namePinyin" : "string",
+  "parentId" : 0,
+  "projectStatus" : "string",
+  "status" : "string",
+  "supplier" : "string",
+  "supplierCode" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findtododocumentlistusingget]]
+==== findTodoDocumentList
+....
+GET /rest/projects/{id}/docs/todo-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0/docs/todo-list
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findtododocumentlistopenedusingget]]
+==== findTodoDocumentListOpened
+....
+GET /rest/projects/{id}/docs/todo-list-non-closed
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0/docs/todo-list-non-closed
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updatetododocumentclosedusingpatch]]
+==== updateTodoDocumentClosed
+....
+PATCH /rest/projects/{id}/docs/todo/{docid}/status/closed
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**docid** +
+__required__|docid|integer (int32)
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0/docs/todo/0/status/closed
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updatetododocumentopenedusingpatch]]
+==== updateTodoDocumentOpened
+....
+PATCH /rest/projects/{id}/docs/todo/{docid}/status/opened
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**docid** +
+__required__|docid|integer (int32)
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0/docs/todo/0/status/opened
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_finddocumentbyuuidusingget]]
+==== findDocumentByUuid
+....
+GET /rest/projects/{id}/docs/uuid-{docuuid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**docuuid** +
+__required__|docuuid|string
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0/docs/uuid-string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createcommentusingpost_1]]
+==== createComment
+....
+POST /rest/projects/{id}/docs/{docid}/comments
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**docid** +
+__required__|docid|integer (int32)
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**comment** +
+__required__|comment|<<_documentcomment,DocumentComment>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0/docs/0/comments
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "creator" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "status" : "string",
+  "text" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_finddocumentcommentlistbyidusingget]]
+==== findDocumentCommentListById
+....
+GET /rest/projects/{id}/docs/{docid}/comments
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**docid** +
+__required__|docid|integer (int32)
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0/docs/0/comments
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createcontentusingpost_1]]
+==== createContent
+....
+POST /rest/projects/{id}/docs/{docid}/contents
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**docid** +
+__required__|docid|integer (int32)
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**content** +
+__required__|content|<<_documentcontent,DocumentContent>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0/docs/0/contents
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "md5" : "string",
+  "status" : "string",
+  "text" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_finddocumentcontentbyidusingget]]
+==== findDocumentContentById
+....
+GET /rest/projects/{id}/docs/{docid}/contents/{contentid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**contentid** +
+__required__|contentid|integer (int32)
+|**Path**|**docid** +
+__required__|docid|integer (int32)
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0/docs/0/contents/0
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updatecontentusingput_1]]
+==== updateContent
+....
+PUT /rest/projects/{id}/docs/{docid}/contents/{contentid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**contentid** +
+__required__|contentid|integer (int32)
+|**Path**|**docid** +
+__required__|docid|integer (int32)
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**content** +
+__required__|content|<<_documentcontent,DocumentContent>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0/docs/0/contents/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "md5" : "string",
+  "status" : "string",
+  "text" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateprojectclosedusingpatch]]
+==== updateProjectClosed
+....
+PATCH /rest/projects/{id}/status/closed
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0/status/closed
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateprojectopenedusingpatch]]
+==== updateProjectOpened
+....
+PATCH /rest/projects/{id}/status/opened
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/0/status/opened
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createtododocumentusingpost]]
+==== createTodoDocument
+....
+POST /rest/projects/{uuid}/docs/todo
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|**Body**|**documentDto** +
+__required__|documentDto|<<_documentdto,DocumentDto>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/projects/string/docs/todo
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "commentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "creator" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "content" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  },
+  "contentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "creator" : {
+    "userId" : 0,
+    "userName" : "string",
+    "userRealName" : "string",
+    "userUuid" : "string"
+  },
+  "docStatus" : "string",
+  "document" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docStatus" : "string",
+    "fileMd5" : "string",
+    "filePath" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "name" : "string",
+    "namePinyin" : "string",
+    "status" : "string",
+    "uuid" : "string"
+  },
+  "id" : 0,
+  "name" : "string",
+  "tagList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "tagId" : 0,
+    "tagName" : "string",
+    "tagType" : "string",
+    "uuid" : "string"
+  } ],
+  "tagName" : "string",
+  "tagType" : "string",
+  "userList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "userId" : 0,
+    "userName" : "string",
+    "uuid" : "string"
+  } ],
+  "userid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_richtext-rest-controller_resource]]
+=== Richtext-rest-controller
+Richtext Rest Controller
+
+
+[[_createusingpost_6]]
+==== create
+....
+POST /rest/core/richtexts
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**richtext** +
+__required__|richtext|<<_richtext,Richtext>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/richtexts
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "status" : "string",
+  "text" : "string",
+  "url" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findbynameusingget]]
+==== findByName
+....
+GET /rest/core/richtexts/name-{name}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**name** +
+__required__|name|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/richtexts/name-string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistbynameusingget_1]]
+==== findListByName
+....
+GET /rest/core/richtexts/namestart-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**namestart** +
+__required__|namestart|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/richtexts/namestart-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "namestart" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistusingget_5]]
+==== findList
+....
+GET /rest/core/richtexts/sort-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**sortby** +
+__required__|sortby|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/richtexts/sort-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findbyuuidusingget_5]]
+==== findByUuid
+....
+GET /rest/core/richtexts/uuid-{uuid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/richtexts/uuid-string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateusingput_4]]
+==== update
+....
+PUT /rest/core/richtexts/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Body**|**richtext** +
+__required__|richtext|<<_richtext,Richtext>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/richtexts/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "status" : "string",
+  "text" : "string",
+  "url" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updatestatususingpatch_3]]
+==== updateStatus
+....
+PATCH /rest/core/richtexts/{id}/status/{status}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|**Path**|**status** +
+__required__|status|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/richtexts/0/status/string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_role-rest-controller_resource]]
+=== Role-rest-controller
+Role Rest Controller
+
+
+[[_createusingpost_7]]
+==== create
+....
+POST /rest/roles
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**role** +
+__required__|role|<<_role,Role>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/roles
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistactivedusingget_1]]
+==== findListActived
+....
+GET /rest/roles/actived-list
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/roles/actived-list
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistbynameusingget_2]]
+==== findListByName
+....
+GET /rest/roles/namestart-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**namestart** +
+__required__|namestart|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/roles/namestart-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "namestart" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistusingget_6]]
+==== findList
+....
+GET /rest/roles/sort-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**sortby** +
+__optional__|sortby|string|`"status"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/roles/sort-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findbyidusingget]]
+==== findById
+....
+GET /rest/roles/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/roles/0
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateusingput_5]]
+==== update
+....
+PUT /rest/roles/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|**Body**|**role** +
+__required__|role|<<_role,Role>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/roles/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createpermissionsusingpost]]
+==== createPermissions
+....
+POST /rest/roles/{id}/permissions
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|**Body**|**list** +
+__required__|list|< <<_rolepermission,RolePermission>> > array
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/roles/0/permissions
+----
+
+
+====== Request body
+[source,json]
+----
+[ {
+  "id" : 0,
+  "perid" : 0,
+  "roleid" : 0
+} ]
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findpermissionlistbyroleidusingget]]
+==== findPermissionListByRoleid
+....
+GET /rest/roles/{id}/permissions
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/roles/0/permissions
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_sso-rest-controller_resource]]
+=== Sso-rest-controller
+SSO Rest Controller
+
+
+[[_logoutbycookieusingdelete]]
+==== logoutByCookie
+....
+DELETE /rest/sso
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/sso
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_loginbycookieusingpost]]
+==== loginByCookie
+....
+POST /rest/sso/cfmd5
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**cfmd5** +
+__required__|cfmd5|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/sso/cfmd5
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "cfmd5" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_loginbyvalidatingnameandcodeusingpost]]
+==== loginByValidatingNameAndCode
+....
+POST /rest/sso/codes
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**hm** +
+__required__|hm|< string, string > map
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/sso/codes
+----
+
+
+====== Request body
+[source,json]
+----
+{ }
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_loginbyvalidatingnameandpasswordusingpost]]
+==== return a key for access token saved in cache. authCacheService.getTokenCache(key)
+....
+POST /rest/sso/passwords
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**hm** +
+__optional__|login data|<<_hashmap,hashmap>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/sso/passwords
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_sysconfig-rest-controller_resource]]
+=== Sysconfig-rest-controller
+Sysconfig Rest Controller
+
+
+[[_createusingpost_8]]
+==== create
+....
+POST /rest/core/sysconfigs
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**sysconfig** +
+__required__|sysconfig|<<_sysconfig,Sysconfig>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/sysconfigs
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "key" : "string",
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "status" : "string",
+  "uuid" : "string",
+  "value" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createdefaultsusingpost]]
+==== createDefaults
+....
+POST /rest/core/sysconfigs/defaults
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/sysconfigs/defaults
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_initializationusingget]]
+==== initialization
+....
+GET /rest/core/sysconfigs/initialization
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/sysconfigs/initialization
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistbykeyusingget]]
+==== findListByKey
+....
+GET /rest/core/sysconfigs/keystart-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**keystart** +
+__required__|keystart|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/sysconfigs/keystart-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "keystart" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistusingget_7]]
+==== findList
+....
+GET /rest/core/sysconfigs/sort-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**sortby** +
+__required__|sortby|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/sysconfigs/sort-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateusingput_6]]
+==== update
+....
+PUT /rest/core/sysconfigs/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|**Body**|**sysconfig** +
+__required__|sysconfig|<<_sysconfig,Sysconfig>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/core/sysconfigs/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "key" : "string",
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "status" : "string",
+  "uuid" : "string",
+  "value" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_user-rest-controller_resource]]
+=== User-rest-controller
+User Rest Controller
+
+
+[[_createusingpost_9]]
+==== create
+....
+POST /rest/users
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**hm** +
+__required__|hm|< string, string > map
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/users
+----
+
+
+====== Request body
+[source,json]
+----
+{ }
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistbynameusingget_3]]
+==== findListByName
+....
+GET /rest/users/namestart-page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**namestart** +
+__required__|namestart|string|
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**pagesize** +
+__optional__|pagesize|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/users/namestart-page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "namestart" : "string",
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findlistusingget_8]]
+==== findList
+....
+GET /rest/users/page-list
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4,.^2"]
+|===
+|Type|Name|Description|Schema|Default
+|**Query**|**page** +
+__optional__|page|integer (int32)|`0`
+|**Query**|**pagesize** +
+__optional__|pagesize|integer (int32)|`0`
+|**Query**|**sortby** +
+__optional__|sortby|string|`"id"`
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/users/page-list
+----
+
+
+====== Request query
+[source,json]
+----
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findbyuuidusingget_6]]
+==== findByUuid
+....
+GET /rest/users/uuid-{uuid}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/users/uuid-string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updateusingput_7]]
+==== update
+....
+PUT /rest/users/{id}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|**Body**|**user** +
+__required__|user|<<_user,User>>
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/users/0
+----
+
+
+====== Request body
+[source,json]
+----
+{
+  "cellPhone" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "email" : "string",
+  "googleSecretKey" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "pwdmodify" : "string",
+  "realName" : "string",
+  "realNameEn" : "string",
+  "sno" : "string",
+  "status" : "string",
+  "uuid" : "string",
+  "weixin" : "string"
+}
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createrolesusingpost]]
+==== createRoles
+....
+POST /rest/users/{id}/roles
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|**Body**|**list** +
+__required__|list|< <<_userrole,UserRole>> > array
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/users/0/roles
+----
+
+
+====== Request body
+[source,json]
+----
+[ {
+  "id" : 0,
+  "roleid" : 0,
+  "userid" : 0
+} ]
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findrolelistusingget]]
+==== findRoleList
+....
+GET /rest/users/{id}/roles
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int64)
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/users/0/roles
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_createpwdmodifybyuuidusingpatch]]
+==== createPwdmodifyByUuid
+....
+PATCH /rest/users/{uuid}/pwdmodify
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/users/string/pwdmodify
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_findqrurlbyuuidusingget]]
+==== findQRUrlByUuid
+....
+GET /rest/users/{uuid}/qr-code-url
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/users/string/qr-code-url
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_updatestatususingpatch_4]]
+==== updateStatus
+....
+PATCH /rest/users/{uuid}/status/{status}
+....
+
+
+===== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**status** +
+__required__|status|string
+|**Path**|**uuid** +
+__required__|uuid|string
+|===
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+===== Consumes
+
+* `application/json`
+
+
+===== Produces
+
+* `*/*`
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/rest/users/string/status/string
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+

@@ -1,0 +1,10384 @@
+h1. Labor-Spring
+
+
+h2. Overview {anchor:overview}
+OAuth, SSO, Accounts etc management
+
+
+h3. Version information
+_Version_ : 1.0
+
+
+h3. URI scheme
+_Host_ : 127.0.0.1:8080\\ 
+_BasePath_ : /ppp
+
+
+h3. Tags
+
+* a-sample-rest-controller : A Sample Rest Controller
+* dictionary-rest-controller : Dictionary Rest Controller
+* document-rest-controller : Document Rest Controller
+* feign-auth-rest-controller : Feign Auth Rest Controller
+* feign-oss-rest-controller : Feign OSS Rest Controller
+* fingerprint-rest-controller : Fingerprint Rest Controller
+* foreign-auth-rest-controller : Foreign Auth Rest Controller
+* foreign-oss-rest-controller : Foreign OSS Rest Controller
+* gallery-rest-controller : Gallery Rest Controller
+* labor-spring-rest-controller : Labor Spring Rest Controller
+* permission-rest-controller : Permission Rest Controller
+* product-rest-controller : Product Rest Controller
+* profile-rest-controller : Profile Rest Controller
+* project-rest-controller : Project Rest Controller
+* richtext-rest-controller : Richtext Rest Controller
+* role-rest-controller : Role Rest Controller
+* sso-rest-controller : SSO Rest Controller
+* sysconfig-rest-controller : Sysconfig Rest Controller
+* user-rest-controller : User Rest Controller
+
+
+
+
+h2. Resources {anchor:paths}
+
+h3. A-sample-rest-controller {anchor:a-sample-rest-controller_resource}
+A Sample Rest Controller
+
+
+h4. create {anchor:createusingpost}
+{noformat}
+POST /rest/core/samples
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*asample*\\ \\ _required_||asample||[ASample|#asample]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/samples
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findList {anchor:findlistusingget_1}
+{noformat}
+GET /rest/core/samples
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/samples
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. aopand {anchor:aopandusingget}
+{noformat}
+GET /rest/core/samples/aopand
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/samples/aopand
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. aopor {anchor:aoporusingget}
+{noformat}
+GET /rest/core/samples/aopor
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/samples/aopor
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListByName {anchor:findlistbynameusingget}
+{noformat}
+GET /rest/core/samples/namestart-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*namestart*\\ \\ _required_||namestart||string|| |
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*pagesize*\\ \\ _optional_||pagesize||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/samples/namestart-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "namestart" : "string",
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findList {anchor:findlistusingget}
+{noformat}
+GET /rest/core/samples/page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*pagesize*\\ \\ _optional_||pagesize||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/samples/page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListByStatus {anchor:findlistbystatususingget}
+{noformat}
+GET /rest/core/samples/status-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*pagesize*\\ \\ _optional_||pagesize||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+|*Query*|*status*\\ \\ _optional_||status||string|| |
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/samples/status-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string",
+  "status" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. test {anchor:testusingget}
+{noformat}
+GET /rest/core/samples/test
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/samples/test
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findByUuid {anchor:findbyuuidusingget}
+{noformat}
+GET /rest/core/samples/uuid-{uuid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/samples/uuid-string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. update {anchor:updateusingput}
+{noformat}
+PUT /rest/core/samples/{id}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*asample*\\ \\ _required_||asample||[ASample|#asample]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/samples/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateStatus {anchor:updatestatususingpatch}
+{noformat}
+PATCH /rest/core/samples/{id}/status/{status}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Path*|*status*\\ \\ _required_||status||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/samples/0/status/string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findSubsListByStatus {anchor:findsubslistbystatususingget}
+{noformat}
+GET /rest/core/samples/{id}/subs
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Query*|*status*\\ \\ _optional_||status||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/samples/0/subs
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "status" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Dictionary-rest-controller {anchor:dictionary-rest-controller_resource}
+Dictionary Rest Controller
+
+
+h4. create {anchor:createusingpost_1}
+{noformat}
+POST /rest/core/dictionaries
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*dictionary*\\ \\ _required_||dictionary||[Dictionary|#dictionary]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/dictionaries
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "code" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "order" : 0,
+  "parentid" : 0,
+  "status" : "string",
+  "uuid" : "string",
+  "value1" : "string",
+  "value2" : "string",
+  "value3" : "string",
+  "value4" : "string",
+  "value5" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findSubsList {anchor:findsubslistusingget}
+{noformat}
+GET /rest/core/dictionaries/subs
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*code*\\ \\ _optional_||code||string|
+|*Query*|*status*\\ \\ _optional_||status||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/dictionaries/subs
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "code" : "string",
+  "status" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findTopsList {anchor:findtopslistusingget}
+{noformat}
+GET /rest/core/dictionaries/tops
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/dictionaries/tops
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createTopDictionarys {anchor:createtopdictionarysusingpost}
+{noformat}
+POST /rest/core/dictionaries/tops-init
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/dictionaries/tops-init
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. update {anchor:updateusingput_1}
+{noformat}
+PUT /rest/core/dictionaries/{id}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*dictionary*\\ \\ _required_||dictionary||[Dictionary|#dictionary]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/dictionaries/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "code" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "order" : 0,
+  "parentid" : 0,
+  "status" : "string",
+  "uuid" : "string",
+  "value1" : "string",
+  "value2" : "string",
+  "value3" : "string",
+  "value4" : "string",
+  "value5" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateStatus {anchor:updatestatususingpatch_1}
+{noformat}
+PATCH /rest/core/dictionaries/{id}/status/{status}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Path*|*status*\\ \\ _required_||status||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/dictionaries/0/status/string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Document-rest-controller {anchor:document-rest-controller_resource}
+Document Rest Controller
+
+
+h4. create {anchor:createusingpost_2}
+{noformat}
+POST /rest/documents
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*documentDto*\\ \\ _required_||documentDto||[DocumentDto|#documentdto]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "commentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "creator" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "content" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  },
+  "contentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "creator" : {
+    "userId" : 0,
+    "userName" : "string",
+    "userRealName" : "string",
+    "userUuid" : "string"
+  },
+  "docStatus" : "string",
+  "document" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docStatus" : "string",
+    "fileMd5" : "string",
+    "filePath" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "name" : "string",
+    "namePinyin" : "string",
+    "status" : "string",
+    "uuid" : "string"
+  },
+  "id" : 0,
+  "name" : "string",
+  "tagList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "tagId" : 0,
+    "tagName" : "string",
+    "tagType" : "string",
+    "uuid" : "string"
+  } ],
+  "tagName" : "string",
+  "tagType" : "string",
+  "userList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "userId" : 0,
+    "userName" : "string",
+    "uuid" : "string"
+  } ],
+  "userid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findList {anchor:findlistusingget_2}
+{noformat}
+GET /rest/documents
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. initDocuments {anchor:initdocumentsusingget}
+{noformat}
+GET /rest/documents/init
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/init
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findMyDocumentList {anchor:findmydocumentlistusingget}
+{noformat}
+GET /rest/documents/my-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/my-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "page" : 0,
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListByNameLike {anchor:findlistbynamelikeusingget}
+{noformat}
+GET /rest/documents/name-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*name*\\ \\ _optional_||name||string|| |
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/name-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "name" : "string",
+  "page" : 0,
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListByTag {anchor:findlistbytagusingget}
+{noformat}
+GET /rest/documents/tag-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"doc_id"{noformat}|
+|*Query*|*tag*\\ \\ _optional_||tag||string|| |
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/tag-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "page" : 0,
+  "sortby" : "string",
+  "tag" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findTagList {anchor:findtaglistusingget}
+{noformat}
+GET /rest/documents/tags/name-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*name*\\ \\ _optional_||name||string|| |
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/tags/name-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "name" : "string",
+  "page" : 0,
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findByUuid {anchor:findbyuuidusingget_1}
+{noformat}
+GET /rest/documents/uuid-{uuid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+|*Query*|*contentid*\\ \\ _optional_||contentid||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/uuid-string
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "contentid" : 0
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. update {anchor:updateusingput_2}
+{noformat}
+PUT /rest/documents/{id}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*documentDto*\\ \\ _required_||documentDto||[DocumentDto|#documentdto]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "commentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "creator" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "content" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  },
+  "contentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "creator" : {
+    "userId" : 0,
+    "userName" : "string",
+    "userRealName" : "string",
+    "userUuid" : "string"
+  },
+  "docStatus" : "string",
+  "document" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docStatus" : "string",
+    "fileMd5" : "string",
+    "filePath" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "name" : "string",
+    "namePinyin" : "string",
+    "status" : "string",
+    "uuid" : "string"
+  },
+  "id" : 0,
+  "name" : "string",
+  "tagList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "tagId" : 0,
+    "tagName" : "string",
+    "tagType" : "string",
+    "uuid" : "string"
+  } ],
+  "tagName" : "string",
+  "tagType" : "string",
+  "userList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "userId" : 0,
+    "userName" : "string",
+    "uuid" : "string"
+  } ],
+  "userid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createComment {anchor:createcommentusingpost}
+{noformat}
+POST /rest/documents/{id}/comments
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*comment*\\ \\ _required_||comment||[DocumentComment|#documentcomment]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/0/comments
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "creator" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "status" : "string",
+  "text" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findCommentListById {anchor:findcommentlistbyidusingget}
+{noformat}
+GET /rest/documents/{id}/comments
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/0/comments
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createContent {anchor:createcontentusingpost}
+{noformat}
+POST /rest/documents/{id}/contents
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*content*\\ \\ _required_||content||[DocumentContent|#documentcontent]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/0/contents
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "md5" : "string",
+  "status" : "string",
+  "text" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findContentVersionsByDocid {anchor:findcontentversionsbydocidusingget}
+{noformat}
+GET /rest/documents/{id}/contents-versions
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/0/contents-versions
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findContentById {anchor:findcontentbyidusingget}
+{noformat}
+GET /rest/documents/{id}/contents/{contentid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*contentid*\\ \\ _required_||contentid||integer (int32)|
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/0/contents/0
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateContent {anchor:updatecontentusingput}
+{noformat}
+PUT /rest/documents/{id}/contents/{contentid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*contentid*\\ \\ _required_||contentid||integer (int32)|
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*content*\\ \\ _required_||content||[DocumentContent|#documentcontent]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/0/contents/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "md5" : "string",
+  "status" : "string",
+  "text" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createTag {anchor:createtagusingpost}
+{noformat}
+POST /rest/documents/{id}/tags
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|| |
+|*Query*|*tagname*\\ \\ _required_||tagname||string|| |
+|*Query*|*tagtype*\\ \\ _optional_||tagtype||string||{noformat}"10"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/0/tags
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "tagname" : "string",
+  "tagtype" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateTagList {anchor:updatetaglistusingpost}
+{noformat}
+POST /rest/documents/{id}/tags/list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*tagList*\\ \\ _required_||tagList||< [DocumentTag|#documenttag] > array|
+|*Body*|*tagType*\\ \\ _required_||tagType||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/0/tags/list
+{code}
+
+
+h6. Request body
+{code:language=json}
+{ }
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateUserList {anchor:updateuserlistusingpost}
+{noformat}
+POST /rest/documents/{id}/users/list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*userList*\\ \\ _required_||userList||< [DocumentUser|#documentuser] > array|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/0/users/list
+{code}
+
+
+h6. Request body
+{code:language=json}
+[ {
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "status" : "string",
+  "userId" : 0,
+  "userName" : "string",
+  "uuid" : "string"
+} ]
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findEntityByFilename {anchor:findentitybyfilenameusingget}
+{noformat}
+GET /rest/documents/{uuid}/file
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/documents/string/file
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h3. Feign-auth-rest-controller {anchor:feign-auth-rest-controller_resource}
+Feign Auth Rest Controller
+
+
+h4. loggout {anchor:logoutusingdelete}
+{noformat}
+DELETE /rest/feign/auth/logins
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/auth/logins
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. deleteCache {anchor:deletecacheusingdelete}
+{noformat}
+DELETE /rest/feign/auth/logins/cache
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/auth/logins/cache
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findUserCurrent {anchor:findusercurrentusingget}
+{noformat}
+GET /rest/feign/auth/logins/users/current
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*fetch*\\ \\ _optional_||fetch||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/auth/logins/users/current
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "fetch" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findUserPermissionsCurrent {anchor:finduserpermissionscurrentusingget}
+{noformat}
+GET /rest/feign/auth/logins/users/permissions/current
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*fetch*\\ \\ _optional_||fetch||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/auth/logins/users/permissions/current
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "fetch" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. callback url registed in auth return a key for access token saved in cache. authCacheService.getTokenCache(key) {anchor:requestusertokenusingpost}
+{noformat}
+POST /rest/feign/auth/logins/users/tokens/keys
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*auth-code*\\ \\ _optional_||auth-code||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/auth/logins/users/tokens/keys
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. init2auth {anchor:init2authusingget}
+{noformat}
+GET /rest/feign/auth/permissions/init2auth
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/auth/permissions/init2auth
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Feign-oss-rest-controller {anchor:feign-oss-rest-controller_resource}
+Feign OSS Rest Controller
+
+
+h4. createFile {anchor:createfileusingpost}
+{noformat}
+POST /rest/feign/oss/files
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*FormData*|*file*\\ \\ _required_||file||file|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}multipart/form-data{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/oss/files
+{code}
+
+
+h6. Request formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findFileByFilename {anchor:findfilebyfilenameusingget}
+{noformat}
+GET /rest/feign/oss/files/{filename}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*filename*\\ \\ _required_||filename||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/oss/files/string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. createImage {anchor:createimageusingpost}
+{noformat}
+POST /rest/feign/oss/images
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*FormData*|*file*\\ \\ _required_||file||file|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}multipart/form-data{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/oss/images
+{code}
+
+
+h6. Request formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findImageByFilename {anchor:findimagebyfilenameusingget}
+{noformat}
+GET /rest/feign/oss/images/{filename}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*filename*\\ \\ _required_||filename||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/oss/images/string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. findImageByFilenameByOrigin {anchor:findimagebyfilenamebyoriginusingget}
+{noformat}
+GET /rest/feign/oss/images/{filename}/origin
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*filename*\\ \\ _required_||filename||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/oss/images/string/origin
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. findImageByFilenameBySize {anchor:findimagebyfilenamebysizeusingget}
+{noformat}
+GET /rest/feign/oss/images/{filename}/size
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*filename*\\ \\ _required_||filename||string|
+|*Query*|*accuracy*\\ \\ _optional_||accuracy||number (double)|
+|*Query*|*height*\\ \\ _optional_||height||integer (int32)|
+|*Query*|*width*\\ \\ _optional_||width||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/oss/images/string/size
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "accuracy" : 0.0,
+  "height" : 0,
+  "width" : 0
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. qrCode {anchor:qrcodeusingget}
+{noformat}
+GET /rest/feign/oss/qr-code
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*content*\\ \\ _optional_||content||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/feign/oss/qr-code
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "content" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h3. Fingerprint-rest-controller {anchor:fingerprint-rest-controller_resource}
+Fingerprint Rest Controller
+
+
+h4. findOnlineList {anchor:findonlinelistusingget}
+{noformat}
+GET /rest/fingerprints/online/page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*pagesize*\\ \\ _optional_||pagesize||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _required_||sortby||string|| |
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/fingerprints/online/page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findOnlineListByValue {anchor:findonlinelistbyvalueusingget}
+{noformat}
+GET /rest/fingerprints/online/valuestart-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*pagesize*\\ \\ _optional_||pagesize||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _required_||sortby||string|| |
+|*Query*|*valuestart*\\ \\ _required_||valuestart||string|| |
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/fingerprints/online/valuestart-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string",
+  "valuestart" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. deleteOnline {anchor:deleteonlineusingdelete}
+{noformat}
+DELETE /rest/fingerprints/online/{foid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*foid*\\ \\ _required_||foid||integer (int64)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/fingerprints/online/0
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findList {anchor:findlistusingget_3}
+{noformat}
+GET /rest/fingerprints/sort-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*sortby*\\ \\ _required_||sortby||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/fingerprints/sort-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findList {anchor:findlistusingget_4}
+{noformat}
+GET /rest/fingerprints/sort-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*pagesize*\\ \\ _optional_||pagesize||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _required_||sortby||string|| |
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/fingerprints/sort-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListByValue {anchor:findlistbyvalueusingget}
+{noformat}
+GET /rest/fingerprints/valuestart-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*valuestart*\\ \\ _required_||valuestart||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/fingerprints/valuestart-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "valuestart" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListByValue {anchor:findlistbyvalueusingget_1}
+{noformat}
+GET /rest/fingerprints/valuestart-sort-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*pagesize*\\ \\ _optional_||pagesize||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _required_||sortby||string|| |
+|*Query*|*valuestart*\\ \\ _required_||valuestart||string|| |
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/fingerprints/valuestart-sort-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string",
+  "valuestart" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateStatus {anchor:updatestatususingpatch_2}
+{noformat}
+PATCH /rest/fingerprints/{id}/status/{status}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int64)|
+|*Path*|*status*\\ \\ _required_||status||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/fingerprints/0/status/string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Foreign-auth-rest-controller {anchor:foreign-auth-rest-controller_resource}
+Foreign Auth Rest Controller
+
+
+h4. Loggout a user {anchor:logoutusingdelete_1}
+{noformat}
+DELETE /rest/foreign/logins
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*code*\\ \\ _optional_||access-token||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||No Content|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/logins
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "code" : "string"
+}
+{code}
+
+
+h4. Find a login user {anchor:findloginuserusingget}
+{noformat}
+GET /rest/foreign/logins/users
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*code*\\ \\ _optional_||access-token||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/logins/users
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "code" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. Fetch a user access-token {anchor:fetchloginusertokenusingpost}
+{noformat}
+POST /rest/foreign/logins/users/tokens
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*code*\\ \\ _optional_||auth-code,access-token||string|
+|*Query*|*type*\\ \\ _optional_||request-token,refresh-token||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/logins/users/tokens
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "code" : "string",
+  "type" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. Update permissions by type {anchor:updatepermissionsusingput}
+{noformat}
+PUT /rest/foreign/permissions/{client-key}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*client-key*\\ \\ _optional_||client name||string|
+|*Query*|*permissions*\\ \\ _optional_||permissions list||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/permissions/{client-key}
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "client-key" : "string",
+  "permissions" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. Find user permissions {anchor:findpermissionsusingget}
+{noformat}
+GET /rest/foreign/permissions/{client-key}/{uuid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*client-key*\\ \\ _optional_||client name||string|
+|*Query*|*uuid*\\ \\ _optional_||user uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/permissions/{client-key}/{uuid}
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "client-key" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Foreign-oss-rest-controller {anchor:foreign-oss-rest-controller_resource}
+Foreign OSS Rest Controller
+
+
+h4. createFile {anchor:createfileusingpost_1}
+{noformat}
+POST /rest/foreign/files
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*FormData*|*file*\\ \\ _required_||file||file|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}multipart/form-data{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/files
+{code}
+
+
+h6. Request formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findFileByFilename {anchor:findfilebyfilenameusingget_1}
+{noformat}
+GET /rest/foreign/files/{filename}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*filename*\\ \\ _required_||filename||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/files/string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. createImage {anchor:createimageusingpost_1}
+{noformat}
+POST /rest/foreign/images
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*FormData*|*file*\\ \\ _required_||file||file|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}multipart/form-data{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/images
+{code}
+
+
+h6. Request formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createImageByBytes {anchor:createimagebybytesusingpost}
+{noformat}
+POST /rest/foreign/images/bytes
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*filename*\\ \\ _required_||filename||string|
+|*Body*|*filebytes*\\ \\ _required_||filebytes||string (byte)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/images/bytes
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "filename" : "string"
+}
+{code}
+
+
+h6. Request body
+{code:language=json}
+{ }
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findImageByFilename {anchor:findimagebyfilenameusingget_1}
+{noformat}
+GET /rest/foreign/images/{filename}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*filename*\\ \\ _required_||filename||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/images/string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. findImageByFilenameByOrigin {anchor:findimagebyfilenamebyoriginusingget_1}
+{noformat}
+GET /rest/foreign/images/{filename}/origin
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*filename*\\ \\ _required_||filename||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/images/string/origin
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. findImageByFilenameBySize {anchor:findimagebyfilenamebysizeusingget_1}
+{noformat}
+GET /rest/foreign/images/{filename}/size
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*filename*\\ \\ _required_||filename||string|
+|*Query*|*accuracy*\\ \\ _optional_||accuracy||number (double)|
+|*Query*|*height*\\ \\ _optional_||height||integer (int32)|
+|*Query*|*width*\\ \\ _optional_||width||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/images/string/size
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "accuracy" : 0.0,
+  "height" : 0,
+  "width" : 0
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. qrCode {anchor:qrcodeusingget_1}
+{noformat}
+GET /rest/foreign/qr-code
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*content*\\ \\ _optional_||content||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/foreign/qr-code
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "content" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h3. Gallery-rest-controller {anchor:gallery-rest-controller_resource}
+Gallery Rest Controller
+
+
+h4. create {anchor:createusingpost_3}
+{noformat}
+POST /rest/galleries
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*gallery*\\ \\ _required_||gallery||[Gallery|#gallery]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "caption" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "namePinyin" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findImageByUuid {anchor:findimagebyuuidusingget}
+{noformat}
+GET /rest/galleries/images/{uuid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/images/string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findImageEntityOriginByUuid {anchor:findimageentityoriginbyuuidusingget}
+{noformat}
+GET /rest/galleries/images/{uuid}/entity
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/images/string/entity
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. findImageEntityThumbnailByUuid {anchor:findimageentitythumbnailbyuuidusingget}
+{noformat}
+GET /rest/galleries/images/{uuid}/entity/thumbnail
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+|*Query*|*accuracy*\\ \\ _optional_||accuracy||number (double)|
+|*Query*|*height*\\ \\ _optional_||height||integer (int32)|
+|*Query*|*width*\\ \\ _optional_||width||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/images/string/entity/thumbnail
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "accuracy" : 0.0,
+  "height" : 0,
+  "width" : 0
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. findListByNameLike {anchor:findlistbynamelikeusingget_1}
+{noformat}
+GET /rest/galleries/name-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*name*\\ \\ _optional_||name||string|| |
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+|*Query*|*status*\\ \\ _optional_||status||string|| |
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/name-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "name" : "string",
+  "page" : 0,
+  "sortby" : "string",
+  "status" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findByUuid {anchor:findbyuuidusingget_2}
+{noformat}
+GET /rest/galleries/uuid-{uuid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/uuid-string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. update {anchor:updateusingput_3}
+{noformat}
+PUT /rest/galleries/{id}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*gallery*\\ \\ _required_||gallery||[Gallery|#gallery]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "caption" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "namePinyin" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createImages {anchor:createimagesusingpost}
+{noformat}
+POST /rest/galleries/{id}/images
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|| |
+|*Query*|*startOrder*\\ \\ _optional_||startOrder||integer (int32)||{noformat}0{noformat}|
+|*FormData*|*files*\\ \\ _required_||files||< file > array(multi)|| |
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/0/images
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "startOrder" : 0
+}
+{code}
+
+
+h6. Request formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createImageSingle {anchor:createimagesingleusingpost}
+{noformat}
+POST /rest/galleries/{id}/images/single
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*FormData*|*file*\\ \\ _required_||file||file|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}multipart/form-data{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/0/images/single
+{code}
+
+
+h6. Request formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateImage {anchor:updateimageusingput}
+{noformat}
+PUT /rest/galleries/{id}/images/{galleryImageId}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*galleryImageId*\\ \\ _required_||galleryImageId||integer (int32)|
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*galleryImage*\\ \\ _required_||galleryImage||[GalleryImage|#galleryimage]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/0/images/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "caption" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "fileName" : "string",
+  "gaId" : 0,
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "namePinyin" : "string",
+  "ohId" : 0,
+  "order" : 0,
+  "status" : "string",
+  "url" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createImage {anchor:createimageusingpost_2}
+{noformat}
+POST /rest/galleries/{id}/test
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*FormData*|*files*\\ \\ _required_||files||< file > array(multi)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/{id}/test
+{code}
+
+
+h6. Request formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createImage2 {anchor:createimage2usingpost}
+{noformat}
+POST /rest/galleries/{id}/test2
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*FormData*|*files*\\ \\ _required_||files||< file > array(multi)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/{id}/test2
+{code}
+
+
+h6. Request formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findCoverByUuid {anchor:findcoverbyuuidusingget}
+{noformat}
+GET /rest/galleries/{uuid}/cover
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/string/cover
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. findImageListByUuid {anchor:findimagelistbyuuidusingget_1}
+{noformat}
+GET /rest/galleries/{uuid}/images
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+|*Query*|*capion*\\ \\ _optional_||capion||string|
+|*Query*|*status*\\ \\ _optional_||status||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/string/images
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "capion" : "string",
+  "status" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findImageListByUuid {anchor:findimagelistbyuuidusingget}
+{noformat}
+GET /rest/galleries/{uuid}/images/page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|| |
+|*Query*|*capion*\\ \\ _optional_||capion||string|| |
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+|*Query*|*status*\\ \\ _optional_||status||string|| |
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/galleries/string/images/page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "capion" : "string",
+  "page" : 0,
+  "sortby" : "string",
+  "status" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Labor-spring-rest-controller {anchor:labor-spring-rest-controller_resource}
+Labor Spring Rest Controller
+
+
+h4. info {anchor:infousingget}
+{noformat}
+GET /rest
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Permission-rest-controller {anchor:permission-rest-controller_resource}
+Permission Rest Controller
+
+
+h4. findListActived {anchor:findlistactivedusingget}
+{noformat}
+GET /rest/permissions/actived-list
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/permissions/actived-list
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. initialization {anchor:initializationusingpost}
+{noformat}
+POST /rest/permissions/initialization
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/permissions/initialization
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Product-rest-controller {anchor:product-rest-controller_resource}
+Product Rest Controller
+
+
+h4. create {anchor:createusingpost_4}
+{noformat}
+POST /rest/products
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*product*\\ \\ _required_||product||[Product|#product]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/products
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "code" : "string",
+  "color" : "string",
+  "costPrice" : 0.0,
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "currency" : "string",
+  "description" : "string",
+  "id" : 0,
+  "itemNo" : "string",
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "marketPrice" : 0.0,
+  "name" : "string",
+  "namePinyin" : "string",
+  "parentId" : 0,
+  "price" : 0.0,
+  "productStatus" : "string",
+  "size" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. exportExcel {anchor:exportexcelusingget}
+{noformat}
+GET /rest/products/excel
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/products/excel
+{code}
+
+
+h4. findListByNameLike {anchor:findlistbynamelikeusingget_2}
+{noformat}
+GET /rest/products/name-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*name*\\ \\ _optional_||name||string|| |
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*pagesize*\\ \\ _optional_||pagesize||integer (int32)|| |
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+|*Query*|*status*\\ \\ _optional_||status||string|| |
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/products/name-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "name" : "string",
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string",
+  "status" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findByUuid {anchor:findbyuuidusingget_3}
+{noformat}
+GET /rest/products/uuid-{uuid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/products/uuid-string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateProduct {anchor:updateproductusingput}
+{noformat}
+PUT /rest/products/{id}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*product*\\ \\ _required_||product||[Product|#product]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/products/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "code" : "string",
+  "color" : "string",
+  "costPrice" : 0.0,
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "currency" : "string",
+  "description" : "string",
+  "id" : 0,
+  "itemNo" : "string",
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "marketPrice" : 0.0,
+  "name" : "string",
+  "namePinyin" : "string",
+  "parentId" : 0,
+  "price" : 0.0,
+  "productStatus" : "string",
+  "size" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findDocumentList {anchor:finddocumentlistusingget}
+{noformat}
+GET /rest/products/{id}/docs/page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|| |
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"doc_id"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/products/0/docs/page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "page" : 0,
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findGalleryList {anchor:findgallerylistusingget}
+{noformat}
+GET /rest/products/{id}/galleries/page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|| |
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"ga_id"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/products/0/galleries/page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "page" : 0,
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findCoverByUuid {anchor:findcoverbyuuidusingget_1}
+{noformat}
+GET /rest/products/{uuid}/cover
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/products/string/cover
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. createDocument {anchor:createdocumentusingpost}
+{noformat}
+POST /rest/products/{uuid}/docs
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+|*Body*|*documentDto*\\ \\ _required_||documentDto||[DocumentDto|#documentdto]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/products/string/docs
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "commentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "creator" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "content" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  },
+  "contentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "creator" : {
+    "userId" : 0,
+    "userName" : "string",
+    "userRealName" : "string",
+    "userUuid" : "string"
+  },
+  "docStatus" : "string",
+  "document" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docStatus" : "string",
+    "fileMd5" : "string",
+    "filePath" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "name" : "string",
+    "namePinyin" : "string",
+    "status" : "string",
+    "uuid" : "string"
+  },
+  "id" : 0,
+  "name" : "string",
+  "tagList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "tagId" : 0,
+    "tagName" : "string",
+    "tagType" : "string",
+    "uuid" : "string"
+  } ],
+  "tagName" : "string",
+  "tagType" : "string",
+  "userList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "userId" : 0,
+    "userName" : "string",
+    "uuid" : "string"
+  } ],
+  "userid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createGallery {anchor:creategalleryusingpost}
+{noformat}
+POST /rest/products/{uuid}/galleries
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+|*Body*|*gallery*\\ \\ _required_||gallery||[Gallery|#gallery]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/products/string/galleries
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "caption" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "namePinyin" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Profile-rest-controller {anchor:profile-rest-controller_resource}
+Profile Rest Controller
+
+
+h4. updateUserPassword {anchor:updateuserpasswordusingpost}
+{noformat}
+POST /rest/profiles/passwords
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*hm*\\ \\ _required_||hm||< string, string > map|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/profiles/passwords
+{code}
+
+
+h6. Request body
+{code:language=json}
+{ }
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createQrCode {anchor:createqrcodeusingget}
+{noformat}
+GET /rest/profiles/qr-code
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*content*\\ \\ _optional_||content||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||< string (byte) > array|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/profiles/qr-code
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "content" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+[ "string" ]
+{code}
+
+
+h4. signup {anchor:signupusingpost}
+{noformat}
+POST /rest/profiles/signup
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*g*\\ \\ _required_||g||string|
+|*Query*|*t*\\ \\ _required_||t||string|
+|*Body*|*hm*\\ \\ _required_||hm||< string, string > map|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||string|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/profiles/signup
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "g" : "string",
+  "t" : "string"
+}
+{code}
+
+
+h6. Request body
+{code:language=json}
+{ }
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+"string"
+{code}
+
+
+h4. signupCode {anchor:signupcodeusingpost}
+{noformat}
+POST /rest/profiles/signup-code
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*g*\\ \\ _required_||g||string|
+|*Query*|*t*\\ \\ _required_||t||string|
+|*Body*|*hm*\\ \\ _required_||hm||< string, string > map|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/profiles/signup-code
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "g" : "string",
+  "t" : "string"
+}
+{code}
+
+
+h6. Request body
+{code:language=json}
+{ }
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. signupSuper {anchor:signupsuperusingpost}
+{noformat}
+POST /rest/profiles/signup-super
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*hm*\\ \\ _required_||hm||< string, string > map|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||string|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/profiles/signup-super
+{code}
+
+
+h6. Request body
+{code:language=json}
+{ }
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+"string"
+{code}
+
+
+h4. findCurrentUser {anchor:findcurrentuserusingget}
+{noformat}
+GET /rest/profiles/users/current
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/profiles/users/current
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateCurrentUser {anchor:updatecurrentuserusingpatch}
+{noformat}
+PATCH /rest/profiles/users/current
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*puser*\\ \\ _required_||puser||[User|#user]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/profiles/users/current
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "cellPhone" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "email" : "string",
+  "googleSecretKey" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "pwdmodify" : "string",
+  "realName" : "string",
+  "realNameEn" : "string",
+  "sno" : "string",
+  "status" : "string",
+  "uuid" : "string",
+  "weixin" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findCurrentUserQRUrl {anchor:findcurrentuserqrurlusingget}
+{noformat}
+GET /rest/profiles/users/current/qr-code-url
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/profiles/users/current/qr-code-url
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findUserPasswordSaltByAccount {anchor:finduserpasswordsaltbyaccountusingget}
+{noformat}
+GET /rest/profiles/users/{account}/salt
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*account*\\ \\ _required_||account||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/profiles/users/string/salt
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findUserByPwdmodifyPassword {anchor:finduserbypwdmodifypasswordusingget}
+{noformat}
+GET /rest/profiles/users/{pwdmodify}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*pwdmodify*\\ \\ _required_||pwdmodify||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/profiles/users/string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findUserQRUrlByPwdmodifyPassword {anchor:finduserqrurlbypwdmodifypasswordusingget}
+{noformat}
+GET /rest/profiles/users/{pwdmodify}/auth-qr-code-url
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*pwdmodify*\\ \\ _required_||pwdmodify||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/profiles/users/string/auth-qr-code-url
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Project-rest-controller {anchor:project-rest-controller_resource}
+Project Rest Controller
+
+
+h4. create {anchor:createusingpost_5}
+{noformat}
+POST /rest/projects
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*project*\\ \\ _required_||project||[Project|#project]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "amount" : 0.0,
+  "code" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "currency" : "string",
+  "customer" : "string",
+  "customerCode" : "string",
+  "deliveryDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "manager" : "string",
+  "managerUserid" : 0,
+  "name" : "string",
+  "namePinyin" : "string",
+  "parentId" : 0,
+  "projectStatus" : "string",
+  "status" : "string",
+  "supplier" : "string",
+  "supplierCode" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListNonClosedByNameLike {anchor:findlistnonclosedbynamelikeusingget}
+{noformat}
+GET /rest/projects/name-list-non-closed
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*name*\\ \\ _required_||name||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/name-list-non-closed
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "name" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListByNameLike {anchor:findlistbynamelikeusingget_3}
+{noformat}
+GET /rest/projects/name-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*name*\\ \\ _required_||name||string|| |
+|*Query*|*notinstatus*\\ \\ _optional_||notinstatus||string|| |
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*pagesize*\\ \\ _optional_||pagesize||integer (int32)|| |
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/name-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "name" : "string",
+  "notinstatus" : "string",
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findByUuid {anchor:findbyuuidusingget_4}
+{noformat}
+GET /rest/projects/uuid-{uuid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/uuid-string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateProject {anchor:updateprojectusingput}
+{noformat}
+PUT /rest/projects/{id}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*project*\\ \\ _required_||project||[Project|#project]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "amount" : 0.0,
+  "code" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "currency" : "string",
+  "customer" : "string",
+  "customerCode" : "string",
+  "deliveryDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "manager" : "string",
+  "managerUserid" : 0,
+  "name" : "string",
+  "namePinyin" : "string",
+  "parentId" : 0,
+  "projectStatus" : "string",
+  "status" : "string",
+  "supplier" : "string",
+  "supplierCode" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findTodoDocumentList {anchor:findtododocumentlistusingget}
+{noformat}
+GET /rest/projects/{id}/docs/todo-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0/docs/todo-list
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findTodoDocumentListOpened {anchor:findtododocumentlistopenedusingget}
+{noformat}
+GET /rest/projects/{id}/docs/todo-list-non-closed
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0/docs/todo-list-non-closed
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateTodoDocumentClosed {anchor:updatetododocumentclosedusingpatch}
+{noformat}
+PATCH /rest/projects/{id}/docs/todo/{docid}/status/closed
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*docid*\\ \\ _required_||docid||integer (int32)|
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0/docs/todo/0/status/closed
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateTodoDocumentOpened {anchor:updatetododocumentopenedusingpatch}
+{noformat}
+PATCH /rest/projects/{id}/docs/todo/{docid}/status/opened
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*docid*\\ \\ _required_||docid||integer (int32)|
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0/docs/todo/0/status/opened
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findDocumentByUuid {anchor:finddocumentbyuuidusingget}
+{noformat}
+GET /rest/projects/{id}/docs/uuid-{docuuid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*docuuid*\\ \\ _required_||docuuid||string|
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0/docs/uuid-string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createComment {anchor:createcommentusingpost_1}
+{noformat}
+POST /rest/projects/{id}/docs/{docid}/comments
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*docid*\\ \\ _required_||docid||integer (int32)|
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*comment*\\ \\ _required_||comment||[DocumentComment|#documentcomment]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0/docs/0/comments
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "creator" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "status" : "string",
+  "text" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findDocumentCommentListById {anchor:finddocumentcommentlistbyidusingget}
+{noformat}
+GET /rest/projects/{id}/docs/{docid}/comments
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*docid*\\ \\ _required_||docid||integer (int32)|
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0/docs/0/comments
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createContent {anchor:createcontentusingpost_1}
+{noformat}
+POST /rest/projects/{id}/docs/{docid}/contents
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*docid*\\ \\ _required_||docid||integer (int32)|
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*content*\\ \\ _required_||content||[DocumentContent|#documentcontent]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0/docs/0/contents
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "md5" : "string",
+  "status" : "string",
+  "text" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findDocumentContentById {anchor:finddocumentcontentbyidusingget}
+{noformat}
+GET /rest/projects/{id}/docs/{docid}/contents/{contentid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*contentid*\\ \\ _required_||contentid||integer (int32)|
+|*Path*|*docid*\\ \\ _required_||docid||integer (int32)|
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0/docs/0/contents/0
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateContent {anchor:updatecontentusingput_1}
+{noformat}
+PUT /rest/projects/{id}/docs/{docid}/contents/{contentid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*contentid*\\ \\ _required_||contentid||integer (int32)|
+|*Path*|*docid*\\ \\ _required_||docid||integer (int32)|
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*content*\\ \\ _required_||content||[DocumentContent|#documentcontent]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0/docs/0/contents/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "docId" : 0,
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "md5" : "string",
+  "status" : "string",
+  "text" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateProjectClosed {anchor:updateprojectclosedusingpatch}
+{noformat}
+PATCH /rest/projects/{id}/status/closed
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0/status/closed
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateProjectOpened {anchor:updateprojectopenedusingpatch}
+{noformat}
+PATCH /rest/projects/{id}/status/opened
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/0/status/opened
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createTodoDocument {anchor:createtododocumentusingpost}
+{noformat}
+POST /rest/projects/{uuid}/docs/todo
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+|*Body*|*documentDto*\\ \\ _required_||documentDto||[DocumentDto|#documentdto]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/projects/string/docs/todo
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "commentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "creator" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "content" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  },
+  "contentList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "html" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "md5" : "string",
+    "status" : "string",
+    "text" : "string",
+    "uuid" : "string"
+  } ],
+  "creator" : {
+    "userId" : 0,
+    "userName" : "string",
+    "userRealName" : "string",
+    "userUuid" : "string"
+  },
+  "docStatus" : "string",
+  "document" : {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docStatus" : "string",
+    "fileMd5" : "string",
+    "filePath" : "string",
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "name" : "string",
+    "namePinyin" : "string",
+    "status" : "string",
+    "uuid" : "string"
+  },
+  "id" : 0,
+  "name" : "string",
+  "tagList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "tagId" : 0,
+    "tagName" : "string",
+    "tagType" : "string",
+    "uuid" : "string"
+  } ],
+  "tagName" : "string",
+  "tagType" : "string",
+  "userList" : [ {
+    "createdBy" : "string",
+    "creationDate" : "string",
+    "description" : "string",
+    "docId" : 0,
+    "id" : 0,
+    "lastUpdateDate" : "string",
+    "lastUpdatedBy" : "string",
+    "status" : "string",
+    "userId" : 0,
+    "userName" : "string",
+    "uuid" : "string"
+  } ],
+  "userid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Richtext-rest-controller {anchor:richtext-rest-controller_resource}
+Richtext Rest Controller
+
+
+h4. create {anchor:createusingpost_6}
+{noformat}
+POST /rest/core/richtexts
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*richtext*\\ \\ _required_||richtext||[Richtext|#richtext]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/richtexts
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "status" : "string",
+  "text" : "string",
+  "url" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findByName {anchor:findbynameusingget}
+{noformat}
+GET /rest/core/richtexts/name-{name}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*name*\\ \\ _required_||name||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/richtexts/name-string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListByName {anchor:findlistbynameusingget_1}
+{noformat}
+GET /rest/core/richtexts/namestart-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*namestart*\\ \\ _required_||namestart||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/richtexts/namestart-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "namestart" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findList {anchor:findlistusingget_5}
+{noformat}
+GET /rest/core/richtexts/sort-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*sortby*\\ \\ _required_||sortby||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/richtexts/sort-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findByUuid {anchor:findbyuuidusingget_5}
+{noformat}
+GET /rest/core/richtexts/uuid-{uuid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/richtexts/uuid-string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. update {anchor:updateusingput_4}
+{noformat}
+PUT /rest/core/richtexts/{id}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Body*|*richtext*\\ \\ _required_||richtext||[Richtext|#richtext]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/richtexts/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "html" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "status" : "string",
+  "text" : "string",
+  "url" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateStatus {anchor:updatestatususingpatch_3}
+{noformat}
+PATCH /rest/core/richtexts/{id}/status/{status}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int32)|
+|*Path*|*status*\\ \\ _required_||status||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/richtexts/0/status/string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Role-rest-controller {anchor:role-rest-controller_resource}
+Role Rest Controller
+
+
+h4. create {anchor:createusingpost_7}
+{noformat}
+POST /rest/roles
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*role*\\ \\ _required_||role||[Role|#role]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/roles
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListActived {anchor:findlistactivedusingget_1}
+{noformat}
+GET /rest/roles/actived-list
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/roles/actived-list
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListByName {anchor:findlistbynameusingget_2}
+{noformat}
+GET /rest/roles/namestart-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*namestart*\\ \\ _required_||namestart||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/roles/namestart-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "namestart" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findList {anchor:findlistusingget_6}
+{noformat}
+GET /rest/roles/sort-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"status"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/roles/sort-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findById {anchor:findbyidusingget}
+{noformat}
+GET /rest/roles/{id}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int64)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/roles/0
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. update {anchor:updateusingput_5}
+{noformat}
+PUT /rest/roles/{id}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int64)|
+|*Body*|*role*\\ \\ _required_||role||[Role|#role]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/roles/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "status" : "string",
+  "uuid" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createPermissions {anchor:createpermissionsusingpost}
+{noformat}
+POST /rest/roles/{id}/permissions
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int64)|
+|*Body*|*list*\\ \\ _required_||list||< [RolePermission|#rolepermission] > array|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/roles/0/permissions
+{code}
+
+
+h6. Request body
+{code:language=json}
+[ {
+  "id" : 0,
+  "perid" : 0,
+  "roleid" : 0
+} ]
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findPermissionListByRoleid {anchor:findpermissionlistbyroleidusingget}
+{noformat}
+GET /rest/roles/{id}/permissions
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int64)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/roles/0/permissions
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Sso-rest-controller {anchor:sso-rest-controller_resource}
+SSO Rest Controller
+
+
+h4. logoutByCookie {anchor:logoutbycookieusingdelete}
+{noformat}
+DELETE /rest/sso
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/sso
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. loginByCookie {anchor:loginbycookieusingpost}
+{noformat}
+POST /rest/sso/cfmd5
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*cfmd5*\\ \\ _required_||cfmd5||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/sso/cfmd5
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "cfmd5" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. loginByValidatingNameAndCode {anchor:loginbyvalidatingnameandcodeusingpost}
+{noformat}
+POST /rest/sso/codes
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*hm*\\ \\ _required_||hm||< string, string > map|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/sso/codes
+{code}
+
+
+h6. Request body
+{code:language=json}
+{ }
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. return a key for access token saved in cache. authCacheService.getTokenCache(key) {anchor:loginbyvalidatingnameandpasswordusingpost}
+{noformat}
+POST /rest/sso/passwords
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*hm*\\ \\ _optional_||login data||[hashmap|#hashmap]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/sso/passwords
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. Sysconfig-rest-controller {anchor:sysconfig-rest-controller_resource}
+Sysconfig Rest Controller
+
+
+h4. create {anchor:createusingpost_8}
+{noformat}
+POST /rest/core/sysconfigs
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*sysconfig*\\ \\ _required_||sysconfig||[Sysconfig|#sysconfig]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/sysconfigs
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "key" : "string",
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "status" : "string",
+  "uuid" : "string",
+  "value" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createDefaults {anchor:createdefaultsusingpost}
+{noformat}
+POST /rest/core/sysconfigs/defaults
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/sysconfigs/defaults
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. initialization {anchor:initializationusingget}
+{noformat}
+GET /rest/core/sysconfigs/initialization
+{noformat}
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/sysconfigs/initialization
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListByKey {anchor:findlistbykeyusingget}
+{noformat}
+GET /rest/core/sysconfigs/keystart-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*keystart*\\ \\ _required_||keystart||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/sysconfigs/keystart-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "keystart" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findList {anchor:findlistusingget_7}
+{noformat}
+GET /rest/core/sysconfigs/sort-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Query*|*sortby*\\ \\ _required_||sortby||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/sysconfigs/sort-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. update {anchor:updateusingput_6}
+{noformat}
+PUT /rest/core/sysconfigs/{id}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int64)|
+|*Body*|*sysconfig*\\ \\ _required_||sysconfig||[Sysconfig|#sysconfig]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/core/sysconfigs/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "id" : 0,
+  "key" : "string",
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "status" : "string",
+  "uuid" : "string",
+  "value" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h3. User-rest-controller {anchor:user-rest-controller_resource}
+User Rest Controller
+
+
+h4. create {anchor:createusingpost_9}
+{noformat}
+POST /rest/users
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Body*|*hm*\\ \\ _required_||hm||< string, string > map|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/users
+{code}
+
+
+h6. Request body
+{code:language=json}
+{ }
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findListByName {anchor:findlistbynameusingget_3}
+{noformat}
+GET /rest/users/namestart-page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*namestart*\\ \\ _required_||namestart||string|| |
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*pagesize*\\ \\ _optional_||pagesize||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/users/namestart-page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "namestart" : "string",
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findList {anchor:findlistusingget_8}
+{noformat}
+GET /rest/users/page-list
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||Default||
+|*Query*|*page*\\ \\ _optional_||page||integer (int32)||{noformat}0{noformat}|
+|*Query*|*pagesize*\\ \\ _optional_||pagesize||integer (int32)||{noformat}0{noformat}|
+|*Query*|*sortby*\\ \\ _optional_||sortby||string||{noformat}"id"{noformat}|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/users/page-list
+{code}
+
+
+h6. Request query
+{code:language=json}
+{
+  "page" : 0,
+  "pagesize" : 0,
+  "sortby" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findByUuid {anchor:findbyuuidusingget_6}
+{noformat}
+GET /rest/users/uuid-{uuid}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/users/uuid-string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. update {anchor:updateusingput_7}
+{noformat}
+PUT /rest/users/{id}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int64)|
+|*Body*|*user*\\ \\ _required_||user||[User|#user]|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/users/0
+{code}
+
+
+h6. Request body
+{code:language=json}
+{
+  "cellPhone" : "string",
+  "createdBy" : "string",
+  "creationDate" : "string",
+  "description" : "string",
+  "email" : "string",
+  "googleSecretKey" : "string",
+  "id" : 0,
+  "lastUpdateDate" : "string",
+  "lastUpdatedBy" : "string",
+  "name" : "string",
+  "pwdmodify" : "string",
+  "realName" : "string",
+  "realNameEn" : "string",
+  "sno" : "string",
+  "status" : "string",
+  "uuid" : "string",
+  "weixin" : "string"
+}
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createRoles {anchor:createrolesusingpost}
+{noformat}
+POST /rest/users/{id}/roles
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int64)|
+|*Body*|*list*\\ \\ _required_||list||< [UserRole|#userrole] > array|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*201*||Created||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/users/0/roles
+{code}
+
+
+h6. Request body
+{code:language=json}
+[ {
+  "id" : 0,
+  "roleid" : 0,
+  "userid" : 0
+} ]
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findRoleList {anchor:findrolelistusingget}
+{noformat}
+GET /rest/users/{id}/roles
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*id*\\ \\ _required_||id||integer (int64)|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/users/0/roles
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. createPwdmodifyByUuid {anchor:createpwdmodifybyuuidusingpatch}
+{noformat}
+PATCH /rest/users/{uuid}/pwdmodify
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/users/string/pwdmodify
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. findQRUrlByUuid {anchor:findqrurlbyuuidusingget}
+{noformat}
+GET /rest/users/{uuid}/qr-code-url
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+|*404*||Not Found||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/users/string/qr-code-url
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+h4. updateStatus {anchor:updatestatususingpatch_4}
+{noformat}
+PATCH /rest/users/{uuid}/status/{status}
+{noformat}
+
+
+h5. Parameters
+
+||Type||Name||Description||Schema||
+|*Path*|*status*\\ \\ _required_||status||string|
+|*Path*|*uuid*\\ \\ _required_||uuid||string|
+
+
+h5. Responses
+
+||HTTP Code||Description||Schema||
+|*200*||OK||[Result|#result]|
+|*204*||No Content||No Content|
+|*401*||Unauthorized||No Content|
+|*403*||Forbidden||No Content|
+
+
+h5. Consumes
+
+* {noformat}application/json{noformat}
+
+
+h5. Produces
+
+* {noformat}*/*{noformat}
+
+
+h5. Example HTTP request
+
+h6. Request path
+{code}
+/rest/users/string/status/string
+{code}
+
+
+h5. Example HTTP response
+
+h6. Response 200
+{code:language=json}
+{
+  "code" : 0,
+  "data" : "object",
+  "msg" : "string"
+}
+{code}
+
+
+
+
+h2. Definitions {anchor:definitions}
+
+h3. ASample {anchor:asample}
+
+||Name||Description||Schema||
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*name*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. Dictionary {anchor:dictionary}
+
+||Name||Description||Schema||
+|*code*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*name*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*order*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*parentid*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*value1*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*value2*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*value3*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*value4*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*value5*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. Document {anchor:document}
+
+||Name||Description||Schema||
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*docStatus*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*fileMd5*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*filePath*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*name*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*namePinyin*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. DocumentComment {anchor:documentcomment}
+
+||Name||Description||Schema||
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*creator*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*docId*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*html*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*text*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. DocumentContent {anchor:documentcontent}
+
+||Name||Description||Schema||
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*docId*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*html*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*md5*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*text*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. DocumentDto {anchor:documentdto}
+
+||Name||Description||Schema||
+|*commentList*\\ \\ _optional_||*Example* : {noformat}[ "[#documentcomment]" ]{noformat}||< [DocumentComment|#documentcomment] > array|
+|*content*\\ \\ _optional_||*Example* : {noformat}"[#documentcontent]"{noformat}||[DocumentContent|#documentcontent]|
+|*contentList*\\ \\ _optional_||*Example* : {noformat}[ "[#documentcontent]" ]{noformat}||< [DocumentContent|#documentcontent] > array|
+|*creator*\\ \\ _optional_||*Example* : {noformat}"[#uservo]"{noformat}||[UserVO|#uservo]|
+|*docStatus*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*document*\\ \\ _optional_||*Example* : {noformat}"[#document]"{noformat}||[Document|#document]|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*name*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*tagList*\\ \\ _optional_||*Example* : {noformat}[ "[#documenttag]" ]{noformat}||< [DocumentTag|#documenttag] > array|
+|*tagName*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*tagType*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*userList*\\ \\ _optional_||*Example* : {noformat}[ "[#documentuser]" ]{noformat}||< [DocumentUser|#documentuser] > array|
+|*userid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. DocumentTag {anchor:documenttag}
+
+||Name||Description||Schema||
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*docId*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*tagId*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*tagName*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*tagType*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. DocumentUser {anchor:documentuser}
+
+||Name||Description||Schema||
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*docId*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*userId*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*userName*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. File {anchor:file}
+
+||Name||Description||Schema||
+|*absolute*\\ \\ _optional_||*Example* : {noformat}true{noformat}||boolean|
+|*absoluteFile*\\ \\ _optional_||*Example* : {noformat}"file"{noformat}||file|
+|*absolutePath*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*canonicalFile*\\ \\ _optional_||*Example* : {noformat}"file"{noformat}||file|
+|*canonicalPath*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*directory*\\ \\ _optional_||*Example* : {noformat}true{noformat}||boolean|
+|*executable*\\ \\ _optional_||*Example* : {noformat}true{noformat}||boolean|
+|*file*\\ \\ _optional_||*Example* : {noformat}true{noformat}||boolean|
+|*freeSpace*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*hidden*\\ \\ _optional_||*Example* : {noformat}true{noformat}||boolean|
+|*lastModified*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*name*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*parent*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*parentFile*\\ \\ _optional_||*Example* : {noformat}"file"{noformat}||file|
+|*path*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*readable*\\ \\ _optional_||*Example* : {noformat}true{noformat}||boolean|
+|*totalSpace*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*usableSpace*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*writable*\\ \\ _optional_||*Example* : {noformat}true{noformat}||boolean|
+
+
+h3. Gallery {anchor:gallery}
+
+||Name||Description||Schema||
+|*caption*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*name*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*namePinyin*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. GalleryImage {anchor:galleryimage}
+
+||Name||Description||Schema||
+|*caption*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*fileName*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*gaId*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*name*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*namePinyin*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*ohId*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*order*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*url*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. InputStream {anchor:inputstream}
+_Type_ : object
+
+
+h3. Product {anchor:product}
+
+||Name||Description||Schema||
+|*code*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*color*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*costPrice*\\ \\ _optional_||*Example* : {noformat}0.0{noformat}||number (float)|
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*currency*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*itemNo*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*marketPrice*\\ \\ _optional_||*Example* : {noformat}0.0{noformat}||number (float)|
+|*name*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*namePinyin*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*parentId*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*price*\\ \\ _optional_||*Example* : {noformat}0.0{noformat}||number (float)|
+|*productStatus*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*size*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. Project {anchor:project}
+
+||Name||Description||Schema||
+|*amount*\\ \\ _optional_||*Example* : {noformat}0.0{noformat}||number (float)|
+|*code*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*currency*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*customer*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*customerCode*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*deliveryDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*manager*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*managerUserid*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*name*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*namePinyin*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*parentId*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*projectStatus*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*supplier*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*supplierCode*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. Resource {anchor:resource}
+
+||Name||Description||Schema||
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*file*\\ \\ _optional_||*Example* : {noformat}"file"{noformat}||file|
+|*filename*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*inputStream*\\ \\ _optional_||*Example* : {noformat}"[#inputstream]"{noformat}||[InputStream|#inputstream]|
+|*open*\\ \\ _optional_||*Example* : {noformat}true{noformat}||boolean|
+|*readable*\\ \\ _optional_||*Example* : {noformat}true{noformat}||boolean|
+|*uri*\\ \\ _optional_||*Example* : {noformat}"[#uri]"{noformat}||[URI|#uri]|
+|*url*\\ \\ _optional_||*Example* : {noformat}"[#url]"{noformat}||[URL|#url]|
+
+
+h3. Result {anchor:result}
+
+||Name||Description||Schema||
+|*code*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*data*\\ \\ _optional_||*Example* : {noformat}"object"{noformat}||object|
+|*msg*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. Richtext {anchor:richtext}
+
+||Name||Description||Schema||
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*html*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*name*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*text*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*url*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. Role {anchor:role}
+
+||Name||Description||Schema||
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*name*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. RolePermission {anchor:rolepermission}
+
+||Name||Description||Schema||
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*perid*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*roleid*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+
+
+h3. Sysconfig {anchor:sysconfig}
+
+||Name||Description||Schema||
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*key*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*value*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. URI {anchor:uri}
+
+||Name||Description||Schema||
+|*absolute*\\ \\ _optional_||*Example* : {noformat}true{noformat}||boolean|
+|*authority*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*fragment*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*host*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*opaque*\\ \\ _optional_||*Example* : {noformat}true{noformat}||boolean|
+|*path*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*port*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*query*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*rawAuthority*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*rawFragment*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*rawPath*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*rawQuery*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*rawSchemeSpecificPart*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*rawUserInfo*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*scheme*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*schemeSpecificPart*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*userInfo*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. URL {anchor:url}
+
+||Name||Description||Schema||
+|*authority*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*content*\\ \\ _optional_||*Example* : {noformat}"object"{noformat}||object|
+|*defaultPort*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*deserializedFields*\\ \\ _optional_||*Example* : {noformat}"[#urlstreamhandler]"{noformat}||[URLStreamHandler|#urlstreamhandler]|
+|*file*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*host*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*path*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*port*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*protocol*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*query*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*ref*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*serializedHashCode*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int32)|
+|*userInfo*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. URLStreamHandler {anchor:urlstreamhandler}
+_Type_ : object
+
+
+h3. User {anchor:user}
+
+||Name||Description||Schema||
+|*cellPhone*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*createdBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*creationDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*description*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*email*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*googleSecretKey*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*lastUpdateDate*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string (date-time)|
+|*lastUpdatedBy*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*name*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*pwdmodify*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*realName*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*realNameEn*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*sno*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*uuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*weixin*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+h3. UserRole {anchor:userrole}
+
+||Name||Description||Schema||
+|*id*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*roleid*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*userid*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+
+
+h3. UserVO {anchor:uservo}
+
+||Name||Description||Schema||
+|*userId*\\ \\ _optional_||*Example* : {noformat}0{noformat}||integer (int64)|
+|*userName*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*userRealName*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+|*userUuid*\\ \\ _optional_||*Example* : {noformat}"string"{noformat}||string|
+
+
+
+
+

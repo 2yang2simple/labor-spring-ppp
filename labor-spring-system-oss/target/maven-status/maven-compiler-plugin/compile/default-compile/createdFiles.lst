@@ -1,0 +1,11 @@
+com\labor\spring\system\oss\entity\ObjectBody.class
+com\labor\spring\system\oss\AliyunOssUtil.class
+com\labor\spring\system\oss\service\ObjectStorageServiceImpl$1.class
+com\labor\spring\system\oss\service\ObjectStorageService.class
+com\labor\spring\system\oss\controller\foreign\ForeignOSSRestController.class
+com\labor\spring\OSSStarterRunner.class
+com\labor\spring\system\oss\service\ObjectStorageServiceImpl.class
+com\labor\spring\system\oss\service\ObjectHeaderRepository.class
+com\labor\spring\system\oss\entity\ObjectHeader.class
+com\labor\spring\system\oss\OSSApplicationProperties.class
+com\labor\spring\system\oss\service\ObjectBodyRepository.class

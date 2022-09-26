@@ -1,0 +1,170 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.labor</groupId>
+		<artifactId>labor</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>com.labor.spring</groupId>
+	<artifactId>labor-spring</artifactId>
+	<name>labor-spring</name>
+	<packaging>jar</packaging>
+	<!--offline doc start -->	
+	<repositories>
+	  <repository>
+	    <snapshots>
+	      <enabled>true</enabled>
+	    </snapshots>
+	    <id>jcenter-releases</id>
+	    <name>jcenter</name>
+	    <url>https://jcenter.bintray.com</url>
+	  </repository>
+	</repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-plugins-release</id>
+            <url>https://repo.spring.io/plugins-release</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+    <!-- offline doc end -->
+    
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-dependencies</artifactId>
+	            <version>${spring-boot.version}</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
+	        
+		</dependencies>
+	</dependencyManagement>
+		
+	<dependencies>
+		<!-- internal dependencies -->
+		<dependency>
+			<groupId>com.labor.common</groupId>
+			<artifactId>labor-common</artifactId>
+			<version>${labor-common.version}</version>
+		</dependency>
+
+
+		<!-- spring.boot -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- provided means when packing war, the tomcat libs are excluded -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+	   		<groupId>org.springframework.boot</groupId>
+	   		<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nz.net.ultraq.thymeleaf</groupId>
+			<artifactId>thymeleaf-layout-dialect</artifactId>
+		</dependency>	
+		
+		<!-- others -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- online doc -->
+		<dependency>
+		   	<groupId>io.springfox</groupId>
+		   	<artifactId>springfox-swagger2</artifactId>
+		   	<version>2.6.1</version>
+		</dependency>
+		<dependency>
+		   	<groupId>io.springfox</groupId>
+		   	<artifactId>springfox-swagger-ui</artifactId>
+		   	<version>2.6.1</version>
+		</dependency>
+		
+        <!--offline doc-->
+  
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional> 
+		</dependency>
+        <dependency>
+            <groupId>org.springframework.restdocs</groupId>
+            <artifactId>spring-restdocs-mockmvc</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-staticdocs</artifactId>
+            <version>2.6.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+        </dependency>
+        <dependency>
+			<groupId>io.github.swagger2markup</groupId>
+			<artifactId>swagger2markup</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-core</artifactId>
+            <version>1.5.16</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-models</artifactId>
+            <version>1.5.16</version>
+        </dependency>
+        <dependency>
+            <groupId>org.pegdown</groupId>
+            <artifactId>pegdown</artifactId>
+            <version>1.4.2</version>
+        </dependency>
+        <dependency>
+		    <groupId>org.asciidoctor</groupId>
+		    <artifactId>asciidoctorj</artifactId>
+		    <version>1.5.3</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.asciidoctor</groupId>
+		    <artifactId>asciidoctorj-pdf</artifactId>
+		    <version>1.5.0-alpha.10.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jruby</groupId>
+			<artifactId>jruby-complete</artifactId>
+			<version>1.7.21</version>
+		</dependency>
+	
+	</dependencies>
+		
+</project>
